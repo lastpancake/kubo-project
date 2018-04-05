@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100vh;
+  background: white;
+  font-family: 'Lato', sans-serif;
+  color: #044c7f;
+  display: grid;
+  line-height: 1.6em;
+  font-size: 18px;
+  grid-template-areas:  "head head head"
+                        "nav nav nav"
+                        "left main right"
+                        "foot foot foot";
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: 75px 75px auto 200px;
+}
+
+
+
+h1 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-family: 'Cabin Sketch';
+  text-align: center;
+}
+
+h2 {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  font-family: 'Cabin Sketch';
+  text-align: center;
+}
+
+h3 {
+
+}
+
+header {
+  grid-area: head;
+  background: #044c7f;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+}
+
+nav {
+  grid-area: nav;
+  background: #f1f1f2;
+	line-height: 70px;
+  text-align: center;
+}
+
+main {
+  grid-area: main;
+  margin: auto;
+}
+
+footer {
+  grid-area: foot;
+  background: #044c7f;
+}
+
+header > img {
+  height: 50px;
+  vertical-align: middle;
+}
+
+
+
+nav > ul > li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav > ul > li > a {
+  color: #044c7f;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.menu_item a:hover {
+  background-color: black;
+  color: white;
+  padding-top: 5px;
+}
+
+.left {
+  margin: 20px;
+  margin-top: 150px;
+}
+
+.center {
+  margin: 20px;
+  min-width: 650px;
+}
+
+.comments {
+  margin: 20px;
+}
+
+.right {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+}
+
+.lesson-info {
+
+}
+
+.lesson-info > p {
+  border-style: solid;
+  border-width: thin;
+  box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
+  margin-top: 60px;
+  height: auto;
+  padding: 20px;
+}
+
+.lesson-overview {
+
+}
+
+.lesson-overview > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lesson {
+  margin-top: 10px;
+}
+
+.lesson > .p-box {
+  min-height: 300px;
+}
+
+.p-box {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 40px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
+  background: white;
+  max-width: 1000px;
+  min-width: 200px;
+}
+
+.comments {
+  align-self: flex-start;
+}
+
+.user-info {
+  min-width: 200px;
+}
+
+.text {
+}
+
+.post-user {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.post-date {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.post-user-img {
+
+}
+
+.post-user-img img {
+  width: 70px;
+}
+
+.add-comment {
+  margin-top: 50px;
+}
+
+input[type=text], textarea {
+    width: 50%;
+    height: 100px;
+    padding: 12px;
+    border: 1px solid #044c7f;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    resize: none;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+}
+
+button {
+  display:block;
+  background-color: #00a19b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.flex-div {
+    display: flex;
+}
+
+span {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: block;
+  max-width: 750px;
+}
+
+@media (max-width: 800px) {
+  body {
+    grid-template-areas:  "head"
+                          "nav"
+                          "main"
+                          "foot";
+    grid-template-columns: auto;
+    grid-template-rows: 75px 75px auto 100px;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left {
+    width: auto;
+    order: 2;
+  }
+
+  .center {
+    width: auto;
+    order: 1;
+  }
+
+  .right {
+    width: auto;
+    order: 3;
+  }
+
+  .comments {
+    width: auto;
+    order: 4;
+  }
+}
