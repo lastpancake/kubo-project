@@ -58,7 +58,8 @@ nav {
 
 main {
   grid-area: main;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer {
@@ -81,7 +82,7 @@ nav > ul > li {
 nav > ul > li > a {
   color: #044c7f;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -93,7 +94,6 @@ nav > ul > li > a {
 
 .left {
   margin: 20px;
-  margin-top: 150px;
 }
 
 .center {
@@ -108,7 +108,6 @@ nav > ul > li > a {
 .right {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 120px;
 }
 
 .lesson-info {
@@ -132,6 +131,11 @@ nav > ul > li > a {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 150px;
+}
+
+.lesson-info > .p-box {
+  margin-top: 160px;
 }
 
 .lesson {
@@ -213,8 +217,17 @@ button {
   cursor: pointer;
 }
 
-.flex-div {
+.flex-div-vertical {
     display: flex;
+}
+
+.new-lessons {
+    display: flex;
+    flex-direction: row;
+}
+
+.lesson-overview > img {
+  width: 200px;
 }
 
 span {
@@ -224,13 +237,48 @@ span {
   max-width: 750px;
 }
 
+.lesson-image > img {
+  width: auto;
+  max-width: 100%;
+}
+
+.new-lesson-box {
+  margin: 2px;
+  padding: 5px;
+  background: lightblue;
+  height: 300px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.new-lesson-span {
+
+}
+
+.new-lesson-span > a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: bottom;
+}
+
+.check-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+
+.check-flex > input {
+  flex: 1 0 100px;
+}
+
 @media (max-width: 800px) {
   body {
     grid-template-areas:  "head"
                           "nav"
                           "main"
                           "foot";
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: 75px 75px auto 100px;
   }
 
@@ -240,8 +288,8 @@ span {
   }
 
   .left {
+    grid: left;
     width: auto;
-    order: 2;
   }
 
   .center {
@@ -250,8 +298,8 @@ span {
   }
 
   .right {
+    grid: right;
     width: auto;
-    order: 3;
   }
 
   .comments {
