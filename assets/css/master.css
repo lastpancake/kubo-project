@@ -255,7 +255,7 @@ span {
 
 }
 
-.new-lesson-span > a {
+.new-lesson-span > a, post-title {
   display: block;
   margin-left: auto;
   margin-right: auto;
