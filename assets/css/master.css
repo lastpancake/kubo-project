@@ -251,22 +251,27 @@ span {
   font-size: 13px;
 }
 
-.post-likes, .post-comments {
+.news-likes, .news-comments {
   max-width: 30%;
   min-width: 30%;
   text-align: right;
 }
 
-.post-info > img {
+.news-info > img {
   height: 16px;
   margin-top: 6px;
   margin-left: 6px;
 }
 
-.post-info {
+.news-info {
   height: 30px;
   display: flex;
   max-width: 200px;
+}
+
+.news-link {
+  text-decoration: none;
+  color: #044c7f;
 }
 
 .new-lesson-span {
