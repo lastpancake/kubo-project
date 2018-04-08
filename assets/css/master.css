@@ -251,6 +251,24 @@ span {
   font-size: 13px;
 }
 
+.post-likes, .post-comments {
+  max-width: 30%;
+  min-width: 30%;
+  text-align: right;
+}
+
+.post-info > img {
+  height: 16px;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+.post-info {
+  height: 30px;
+  display: flex;
+  max-width: 200px;
+}
+
 .new-lesson-span {
 
 }
