@@ -221,9 +221,14 @@ button {
     display: flex;
 }
 
-.new-lessons {
+.new-lessons, .news {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.news {
+
 }
 
 .lesson-overview > img {
@@ -242,13 +247,20 @@ span {
   max-width: 100%;
 }
 
-.new-lesson-box {
+.new-lesson-box, .news-box {
   margin: 2px;
   padding: 5px;
   background: lightblue;
   height: 300px;
   text-align: center;
   font-size: 13px;
+  min-width: 170px;
+  max-width: 180px;
+}
+
+.news-box {
+  min-width: 170px;
+  max-width: 180px;
 }
 
 .news-likes, .news-comments {
