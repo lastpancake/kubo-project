@@ -5,22 +5,25 @@ function Comment(image, name, date, text) {
   this.text = text;
 }
 
-function getLocalComment()
-{
+function getLocalComment() {
   var comments = localStorage.getItem("keduComments");
 
-  if(comments != null)
-  {
+  if(comments != null) {
     return JSON.parse(comments);
   }
-  else
-  {
-    return [new Comment("assets/images/Portræt-til-Skype.jpg", "Morten Mortensen", "5-11-2017", "Rigtig god lektion!"), new Comment("assets/images/Portræt-til-Skype.jpg", "Ulla Arnesen", "5-1-2018", "Mine elever var rigtig glade for lektionen :-)")];
+  else {
+    return [  new Comment("assets/images/Portræt-til-Skype.jpg",
+                          "Morten Mortensen",
+                          "5-11-2017",
+                          "Rigtig god lektion!"),
+              new Comment("assets/images/Portræt-til-Skype.jpg",
+                          "Ulla Arnesen",
+                          "5-1-2018",
+                          "Mine elever var rigtig glade for lektionen :-)")];
   }
 }
 
-function setLocalComment(origComments)
-{
+function setLocalComment(origComments) {
   //converting it to JSON
   var newComments = JSON.stringify(origComments);
 
@@ -28,8 +31,7 @@ function setLocalComment(origComments)
   localStorage.setItem("keduComments", newComments);
 }
 
-function submitComment(image, name, date, text)
-{
+function submitComment(image, name, date, text) {
   var origComments = getLocalComment();
 
   var newComment = new Comment(image, name, date, text)
@@ -39,27 +41,24 @@ function submitComment(image, name, date, text)
   setLocalComment(origComments);
 }
 
-function buildList()
-{
+function buildList() {
   var comments = getLocalComment();
 
   var commentsDiv = document.querySelector(".comments");
   commentsDiv.innerHTML = "";
 
-  for(var i = comments.length - 1; i > -1; i--)
-  {
+  for(var i = comments.length - 1; i > -1; i--) {
     var pBox = document.createElement("div");
-    pBox.setAttribute("class", "p-box");
+    pBox.classList.add("p-box");
 
     var flexDiv = document.createElement("div");
-    flexDiv.setAttribute("class", "flex-div-vertical");
+    flexDiv.classList.add("flex-div-vertical");
 
     var userInfo = document.createElement("div");
-    userInfo.setAttribute("class", "user-info");
+    userInfo.classList.add("user-info");
 
     var userImgDiv = document.createElement("div");
     userImgDiv.classList.add("post-user-img");
-    //userImgDiv = document.setAttribute("class", "post-user-img");
     var userImg = document.createElement("img");
     userImg.src = comments[i].imageSrc;
 
@@ -68,7 +67,6 @@ function buildList()
 
     var postUser = document.createElement("div");
     postUser.classList.add("post-user");
-    //postUser.setAttribute("class", "post-user");
     postUser.innerHTML = "Af: " + comments[i].userName;
 
     userInfo.appendChild(postUser);
@@ -98,15 +96,13 @@ function buildList()
   }
 }
 
-window.onload = function()
-{
+window.onload = function() {
   buildList();
 }
 
 var submitBtn = document.querySelector("#addCommentBtn");
 
-submitBtn.addEventListener("click", function()
-{
+submitBtn.addEventListener("click", function() {
   var userImage = "assets/images/Portræt-til-Skype.jpg";
   var userName = "Mathias Poulsen";
   var time = new Date();
