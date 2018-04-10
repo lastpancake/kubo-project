@@ -370,3 +370,57 @@ span > img {
     order: 4;
   }
 }
+
+
+/* for fællesskab */
+
+.thread-container {
+  display: block;
+  width: auto;
+  min-height: 500px;
+}
+
+.thread-box {
+  min-width: 650px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 40px;
+  border-style: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
+}
+
+.l-blue {
+  background: rgb(33, 99, 147);
+}
+
+.green {
+  background: rgb(0, 162, 155);
+}
+
+.blue {
+  background: rgb(4, 76, 127);
+}
+
+.thread-user-info {
+  min-width: 150px;
+  max-width: 200px;
+}
+.thread-user-img {
+  max-width: 70px;
+}
+
+.thread-user {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.thread-date {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.thread {
+  display: flex;
+  color: white;
+}
