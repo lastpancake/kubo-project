@@ -231,14 +231,15 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content:space-around;
 }
 
 .new-lessons > a {
   max-width: 25%;
 }
 
-.news {
-
+.news > a {
+  max-width: 25%;
 }
 
 .lesson-overview > img {
@@ -270,12 +271,6 @@ span > img {
   min-height: 400px;
   text-align: center;
   font-size: 13px;
-  min-width: 170px;
-  max-width: 180px;
-}
-
-.news-box {
-  min-width: 170px;
   max-width: 180px;
 }
 
@@ -306,7 +301,7 @@ span > img {
 
 }
 
-.new-lesson-span > a, post-title {
+.new-lesson-span > a, .post-title {
   display: block;
   margin-left: auto;
   margin-right: auto;
