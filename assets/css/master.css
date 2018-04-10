@@ -21,7 +21,10 @@ body {
   grid-template-rows: 75px 75px auto 200px;
 }
 
-
+a {
+  text-decoration: none;
+  color: #044c7f;
+}
 
 h1 {
   margin-top: 2em;
@@ -54,6 +57,7 @@ nav {
   background: #f1f1f2;
 	line-height: 70px;
   text-align: center;
+  box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
 }
 
 main {
@@ -164,7 +168,7 @@ nav > ul > li > a {
 }
 
 .user-info {
-  min-width: 200px;
+  min-width: 220px;
 }
 
 .text {
@@ -190,6 +194,7 @@ nav > ul > li > a {
 
 .add-comment {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 input[type=text], textarea {
@@ -224,6 +229,11 @@ button {
 .new-lessons {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.new-lessons > a {
+  max-width: 25%;
 }
 
 .lesson-overview > img {
@@ -236,6 +246,12 @@ span {
   display: block;
   max-width: 750px;
 }
+span > img {
+  width: 12%;
+  vertical-align: middle;
+}
+
+
 
 .lesson-image > img {
   width: auto;
@@ -246,7 +262,7 @@ span {
   margin: 2px;
   padding: 5px;
   background: lightblue;
-  height: 300px;
+  min-height: 400px;
   text-align: center;
   font-size: 13px;
 }
@@ -265,11 +281,23 @@ span {
 .check-flex {
   display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.check-flex > input {
+.check-flex > div {
   flex: 1 0 100px;
+  margin: 10px;
+  background: rgba(blue, 0.25);
+}
+
+.check-flex > div > input {
+  margin: 5px;
+}
+
+.test {
+  background: #f1f1f2;
 }
 
 @media (max-width: 800px) {
