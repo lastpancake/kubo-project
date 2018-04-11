@@ -94,6 +94,8 @@ nav > ul > li > a {
 
 #velkommen-h3 {
   font-weight: normal;
+  color: #fff;
+  text-decoration: none;
 }
 
 #news {
