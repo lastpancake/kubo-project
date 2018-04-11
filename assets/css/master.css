@@ -42,7 +42,11 @@ h2 {
 }
 
 h3 {
+}
 
+.center-head {
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 header {
@@ -107,15 +111,13 @@ nav > ul > li > a {
 
 .left {
   margin: 20px;
-
-  margin-top: 170px;
+  margin-top: 270px;
 }
 
 .center {
   margin: 20px;
   min-width: 650px;
-
-  margin-top: 170px;
+  margin-top: 200px;
 }
 
 .comments {
@@ -126,7 +128,7 @@ nav > ul > li > a {
 .right {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 170px;
+  margin-top: 270px;
 }
 
 .lesson-info {
@@ -150,7 +152,6 @@ nav > ul > li > a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
 }
 
 .lesson-info > .p-box {
@@ -273,7 +274,11 @@ span > img {
   vertical-align: middle;
 }
 
-
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .lesson-image > img {
   width: auto;
@@ -284,7 +289,7 @@ span > img {
   margin: 2px;
   padding: 5px;
   background: lightblue;
-  min-height: 400px;
+  min-height: 300px;
   text-align: center;
   font-size: 13px;
   max-width: 180px;
