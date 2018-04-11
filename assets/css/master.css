@@ -57,6 +57,8 @@ header {
   color: white;
   line-height: 70px;
   text-align: center;
+  z-index: 1000;
+  height: 70px;
 }
 
 nav {
@@ -68,6 +70,7 @@ nav {
 	line-height: 70px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
+  z-index: 1000;
 }
 
 main {
@@ -355,8 +358,6 @@ span > img {
 
 /* for fællesskab */
 
-
-
 .thread-check-flex {
   display: flex;
   align-items: center;
@@ -402,7 +403,7 @@ span > img {
 .thread-user-info {
   font-size: 14px;
   min-width: 130px;
-  max-width: 180px;
+  max-width: 130px;
 }
 .thread-user-img {
   max-width: 70px;
