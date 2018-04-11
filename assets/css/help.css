@@ -2,6 +2,8 @@
   list-style-type: none;
 }
 
-.faq ul li {
+.faq li {
   line-height: 1,2em;
+  border-top: 2px solid #1D4C8F;
+  padding: 15px;
 }
