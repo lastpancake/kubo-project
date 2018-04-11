@@ -1,0 +1,7 @@
+.faq ul {
+  list-style-type: none;
+}
+
+.faq ul li {
+  line-height: 1,2em;
+}
