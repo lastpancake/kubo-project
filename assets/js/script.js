@@ -67,13 +67,13 @@ function buildList() {
 
     var postUser = document.createElement("div");
     postUser.classList.add("post-user");
-    postUser.innerHTML = "Af: " + comments[i].userName;
+    postUser.innerHTML = "" + comments[i].userName;
 
     userInfo.appendChild(postUser);
 
     var postDate = document.createElement("div");
     postDate.classList.add("post-date");
-    postDate.innerHTML = "Oprettet: " + comments[i].dateOfPost;
+    postDate.innerHTML = "" + comments[i].dateOfPost;
 
     userInfo.appendChild(postDate);
     flexDiv.appendChild(userInfo);

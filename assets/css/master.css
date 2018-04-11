@@ -13,12 +13,11 @@ body {
   display: grid;
   line-height: 1.6em;
   font-size: 18px;
-  grid-template-areas:  "head head head"
-                        "nav nav nav"
+  grid-template-areas:
                         "left main right"
                         "foot foot foot";
   grid-template-columns: 1fr 1.5fr 1fr;
-  grid-template-rows: 75px 75px auto 200px;
+  grid-template-rows: auto 200px;
 }
 
 a {
@@ -48,6 +47,8 @@ h3 {
 
 header {
   grid-area: head;
+  position: fixed;
+  width: 100%;
   background: #044c7f;
   color: white;
   line-height: 70px;
@@ -56,6 +57,9 @@ header {
 
 nav {
   grid-area: nav;
+  position: fixed;
+  width: 100%;
+  margin-top: 70px;
   background: #f1f1f2;
 	line-height: 70px;
   text-align: center;
@@ -77,6 +81,8 @@ footer {
 header > img {
   height: 50px;
   vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -101,20 +107,26 @@ nav > ul > li > a {
 
 .left {
   margin: 20px;
+
+  margin-top: 170px;
 }
 
 .center {
   margin: 20px;
   min-width: 650px;
+
+  margin-top: 170px;
 }
 
 .comments {
   margin: 20px;
+
 }
 
 .right {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 170px;
 }
 
 .lesson-info {
@@ -178,13 +190,13 @@ nav > ul > li > a {
 }
 
 .post-user {
-  font-style: italic;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 .post-date {
-  font-style: italic;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 .post-user-img {
@@ -198,6 +210,8 @@ nav > ul > li > a {
 .add-comment {
   margin-top: 50px;
   margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 input[type=text], textarea {
@@ -225,7 +239,7 @@ button {
   cursor: pointer;
 }
 
-.flex-div-vertical {
+.flex-div-comment {
     display: flex;
 }
 
@@ -326,49 +340,13 @@ span > img {
 }
 
 .check-flex > div > input {
-  margin: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .test {
   background: #f1f1f2;
 }
-
-@media (max-width: 800px) {
-  body {
-    grid-template-areas:  "head"
-                          "nav"
-                          "main"
-                          "foot";
-    grid-template-columns: 1fr;
-    grid-template-rows: 75px 75px auto 100px;
-  }
-
-  main {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .left {
-    grid: left;
-    width: auto;
-  }
-
-  .center {
-    width: auto;
-    order: 1;
-  }
-
-  .right {
-    grid: right;
-    width: auto;
-  }
-
-  .comments {
-    width: auto;
-    order: 4;
-  }
-}
-
 
 /* for fællesskab */
 
@@ -421,4 +399,124 @@ span > img {
 .thread {
   display: flex;
   color: white;
+}
+
+/* Smaller screensizes */
+
+@media (max-width: 800px) {
+  body {
+    grid-template-areas:
+
+                          "main"
+                          "right"
+                          "left"
+                          "foot";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 100px;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  nav {
+    margin-top: 80px;
+    height: 80px;
+  }
+
+  .left {
+    grid: left;
+    width: auto;
+    margin-top: 70px;
+  }
+
+  .center {
+    width: auto;
+    order: 1;
+    margin-top: 180px;
+  }
+
+  .right {
+    grid: right;
+    width: auto;
+    margin-top: 70px;
+  }
+
+  .comments {
+    width: auto;
+    order: 4;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 30px;
+    line-height: 2em;
+    grid-template-areas:
+                          "main"
+                          "left"
+                          "right"
+                          "foot";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 100px;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  nav {
+    margin-top: 80px;
+    height: 80px;
+  }
+
+  .left {
+    grid: left;
+    width: auto;
+    margin-top: 20px;
+  }
+
+  .center {
+    width: auto;
+    order: 1;
+    margin-top: 200px;
+  }
+
+  .right {
+    grid: right;
+    width: auto;
+    margin-top: 20px;
+  }
+
+  .comments {
+    width: auto;
+    order: 4;
+  }
+
+  .flex-div-comment {
+    flex-direction: column;
+  }
+
+  .user-info {
+  }
+
+  input[type=text], textarea {
+      width: 100%;
+      height: 250px;
+  }
+
+  button {
+    padding: 24px 40px;
+    font-size: 36px;
+  }
 }
