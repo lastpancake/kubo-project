@@ -8,15 +8,22 @@
   padding: 15px;
 }
 
-.manualer {
+.help-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .manual_kasse {
-height: 500px;
-width: 280px;
-background-color: #F3F3F4;
-text-align: center;
-align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 280px;
+  background-color: #F3F3F4;
+  margin: 10px;
+
 }
 
 .vejledninger {
