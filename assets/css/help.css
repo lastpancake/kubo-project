@@ -16,16 +16,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
 .manual_kasse {
   display: flex;
   flex-direction: column;
-height: 500px;
-width: 280px;
-background-color: #F3F3F4;
-
+  height: 500px;
+  width: 280px;
+  background-color: #F3F3F4;
 }
 
 .vejledninger {
