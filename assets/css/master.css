@@ -105,13 +105,14 @@ nav > ul > li > a {
 }
 
 #velkommen-billede {
+  margin-top: 130px;
   min-width: 100%;
   opacity: .6;
   z-index: -1000;
 }
 
 #velkommen {
-  margin-top: 150px;
+  margin-top: 260px;
 }
 
 #velkommen-h2, #velkommen-h3 {
@@ -137,6 +138,12 @@ nav > ul > li > a {
 
 #news {
   margin-top: 220px;
+}
+
+#news-h2, #more-news-h3 {
+  font-weight: normal;
+  font-size: 3em;
+  text-shadow: 0 2px 2px rgba(4, 20, 20, .5);
 }
 
 .menu_item a:hover {
