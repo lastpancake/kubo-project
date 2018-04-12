@@ -92,8 +92,6 @@ header > img {
   margin-right: auto;
 }
 
-
-
 nav > ul > li {
   display: inline-block;
   margin-right: 20px;
@@ -104,6 +102,30 @@ nav > ul > li > a {
   text-decoration: none;
   font-size: 1em;
   font-weight: bold;
+}
+
+#velkommen-billede {
+  min-width: 100%;
+  opacity: .6;
+  z-index: -1000;
+}
+
+#velkommen {
+  margin-top: 150px;
+}
+
+#velkommen-h2, #velkommen-h3 {
+  text-shadow: 0 2px 2px rgba(4, 20, 20, 0.25);
+}
+
+#velkommen-h3 {
+  font-weight: normal;
+  color: #fff;
+  text-decoration: none;
+}
+
+#news {
+  margin-top: 220px;
 }
 
 .menu_item a:hover {
@@ -291,24 +313,36 @@ span > img {
 .new-lesson-box, .news-box {
   margin: 2px;
   padding: 5px;
-  background: lightblue;
-  min-height: 300px;
+  background: #00a19b;
+  height: 300px;
   text-align: center;
   font-size: 13px;
+  min-width: 170px;
+  max-width: 180px;
+}
+
+.news-title, .news-likes, .news-comments {
+  color: #FFF;
+  font-weight: normal;
+}
+
+.news-box {
+  min-width: 170px;
   max-width: 180px;
   margin-bottom: 20px;
 }
 
 .news-likes, .news-comments {
-  max-width: 30%;
-  min-width: 30%;
-  text-align: right;
+  max-width: 25px;
+  min-width: 25px;
+  text-align: left;
+  margin-left: 5px;
 }
 
 .news-info > img {
   height: 16px;
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 30px;
 }
 
 .news-info {
