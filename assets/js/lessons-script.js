@@ -7,7 +7,7 @@ function Lesson(image, title, text, tag, link) {
 }
 
 function getLocalLessons() {
-  var lessons = localStorage.getItem("keduLessons");
+  let lessons = localStorage.getItem("keduLessons");
 
   if(lessons != null) {
     return JSON.parse(lessons);
@@ -62,14 +62,19 @@ function getLocalLessons() {
                           "Critical thinking",
                           "Noget om critical thinking",
                           "code",
-                          "critical-thinking")];
+                          "critical-thinking"),
+                          new Lesson("assets/images/critical-thinking.png",
+                                      "Critical thinking",
+                                      "Noget om critical thinking",
+                                      "code",
+                                      "critical-thinking")];
   }
 }
 
 function getChecked() {
-  var checkboxes = document.querySelectorAll(".check");
-  var checked = [];
-  for (var i = 0; i < checkboxes.length; i++) {
+  let checkboxes = document.querySelectorAll(".check");
+  let checked = [];
+  for (let i = 0; i < checkboxes.length; i++) {
     if (checkboxes[i].checked == true) {
       checked.push(checkboxes[i].id);
     }
@@ -82,8 +87,8 @@ function buildNewLessons() {
 }
 
 function buildAllLessons() {
-  var checked = getChecked();
-  var lessonArray = [];
+  let checked = getChecked();
+  let lessonArray = [];
 
   for (variable of getLocalLessons()) {
     if (checked.includes(variable.tag)) {
@@ -97,21 +102,26 @@ function buildAllLessons() {
   for (variable of lessonArray) {
     //console.log(variable.title);
 
-    var a = document.createElement("a");
+    let a = document.createElement("a");
     a.setAttribute("href", "lesson.html?" + variable.link)
 
-    var lessonBox = document.createElement("div");
+    let lessonBox = document.createElement("div");
     lessonBox.classList.add("lesson-box");
 
-    var lessonImage = document.createElement("img");
+    let overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+
+    lessonBox.appendChild(overlay);
+
+    let lessonImage = document.createElement("img");
     lessonImage.setAttribute("src", variable.imageSrc);
 
     lessonBox.appendChild(lessonImage);
 
-    var lessonText = document.createElement("div");
+    let lessonText = document.createElement("div");
     lessonText.classList.add("lesson-text");
 
-    var lessonTextHead = document.createElement("h3");
+    let lessonTextHead = document.createElement("h3");
     lessonTextHead.innerHTML = variable.title;
 
     lessonText.appendChild(lessonTextHead);
@@ -137,22 +147,22 @@ window.onload = function() {
   buildList();
 }
 
-var codeCheck = document.querySelector("#code");
+let codeCheck = document.querySelector("#code");
 codeCheck.addEventListener('change', function() {
   buildAllLessons();
 });
 
-var mathsCheck = document.querySelector("#maths");
+let mathsCheck = document.querySelector("#maths");
 mathsCheck.addEventListener('change', function() {
   buildAllLessons();
 });
 
-var danishCheck = document.querySelector("#danish");
+let danishCheck = document.querySelector("#danish");
 danishCheck.addEventListener('change', function() {
   buildAllLessons();
 });
 
-var physicsCheck = document.querySelector("#physics");
+let physicsCheck = document.querySelector("#physics");
 physicsCheck.addEventListener('change', function() {
   buildAllLessons();
 });

@@ -85,6 +85,13 @@ footer {
   background: #044c7f;
 }
 
+hr {
+  margin-top: 100px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 3px;
+}
+
 header > img {
   height: 50px;
   vertical-align: middle;
@@ -105,13 +112,14 @@ nav > ul > li > a {
 }
 
 #velkommen-billede {
+  margin-top: 130px;
   min-width: 100%;
   opacity: .6;
   z-index: -1000;
 }
 
 #velkommen {
-  margin-top: 150px;
+  margin-top: 260px;
 }
 
 #velkommen-h2, #velkommen-h3 {
@@ -127,16 +135,37 @@ nav > ul > li > a {
 #velkommen-h3 {
   font-weight: normal;
   text-decoration: none;
+  text-align: center;
+  line-height: 1.8em;
 }
 
 #relaterede-opslag-h3 {
   font-weight: normal;
   text-decoration: none;
-  color: #FFF;
+  color: rgb(4, 76, 127);
 }
 
 #news {
   margin-top: 220px;
+}
+
+#news-h2, #more-news-h3 {
+  font-weight: normal;
+  font-size: 3em;
+  text-shadow: 0 2px 2px rgba(4, 20, 20, .5);
+}
+
+#thread-h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25em;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #FFF;
+}
+
+#thread-p {
+  color: #FFF;
 }
 
 .menu_item a:hover {
@@ -156,15 +185,20 @@ nav > ul > li > a {
   margin-top: 200px;
 }
 
-.comments {
-  margin: 20px;
-
-}
-
 .right {
   margin-left: auto;
   margin-right: auto;
   margin-top: 270px;
+}
+
+.right > a > .lesson-box {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right > a > .lesson-box > img {
+  max-height: 100%;
 }
 
 .lesson-info {
@@ -205,13 +239,26 @@ nav > ul > li > a {
 .p-box {
   margin-top: 20px;
   margin-bottom: 50px;
-  padding: 40px;
+  padding: 20px;
   border-style: solid;
   border-width: thin;
   border-radius: 4px;
   box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
   background: white;
   max-width: 1000px;
+  min-width: 200px;
+}
+
+.p-box-discussion {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
+  background: white;
+  max-width: 650px;
   min-width: 200px;
 }
 
@@ -228,23 +275,38 @@ nav > ul > li > a {
   min-width: 200px;
 }
 
+.comments-discussion > .p-box {
+  max-width: 600px;
+  margin-left: 30px;
+}
+
 .comments {
   align-self: flex-start;
+  margin: 20px;
 }
 
 .user-info {
-  min-width: 220px;
+  min-width: 100px;
 }
 
 .text {
+
 }
 
-.post-user {
-  font-weight: bold;
+.post-user, .post-user-white {
+  font-size: 14px;
 }
 
-.post-date {
-  font-weight: bold;
+.post-user-white {
+  color: #FFF;
+}
+
+.post-date, .post-date-white {
+  font-size: 14px;
+}
+
+.post-date-white {
+  color: #FFF;
 }
 
 .post-user-img {
@@ -258,12 +320,13 @@ nav > ul > li > a {
 .add-comment {
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 20px;
+  margin-left: 60px;
   margin-right: 20px;
+  width: 600px;
 }
 
 input[type=text], textarea {
-    width: 50%;
+    width: 100%;
     height: 100px;
     padding: 12px;
     border: 1px solid #044c7f;
@@ -275,6 +338,7 @@ input[type=text], textarea {
     font-size: inherit;
     color: inherit;
     line-height: inherit;
+    box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
 }
 
 button {
@@ -295,7 +359,7 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .new-lessons > a {
@@ -339,16 +403,18 @@ span > img {
 .new-lesson-box, .news-box {
   margin: 2px;
   padding: 5px;
-  background: #00a19b;
   height: 300px;
   text-align: center;
   font-size: 13px;
   min-width: 170px;
   max-width: 180px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(153,153,153);
 }
 
 .news-title, .news-likes, .news-comments {
-  color: #FFF;
+  color: #044c7f;
   font-weight: normal;
 }
 
@@ -356,6 +422,7 @@ span > img {
   min-width: 170px;
   max-width: 180px;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .lesson-box {
@@ -366,6 +433,23 @@ span > img {
   margin: 5px;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: white;
+}
+
+.lesson-box:hover .overlay {
+  opacity: 0.4;
 }
 
 .lesson-box > .lesson-text {
@@ -476,6 +560,21 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
 .thread-box {
   display: flex;
   min-width: 650px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-style: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
+  position: relative;
+}
+
+.comment-box {
+  display: flex;
+  max-width: 550px;
+  min-width: 550px;
+  margin-left: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 15px;
@@ -487,6 +586,18 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
 
 .l-blue {
   background: rgb(33, 99, 147);
+}
+
+.thread-comment {
+  background: rgb(250, 250, 250);
+  border-color: rgb(4,76,127);
+  border-width: 1px;
+  border-style: solid;
+  display: block;
+}
+
+.thread-text-comment {
+  color: rgb(4, 76, 127);
 }
 
 .green {
@@ -507,6 +618,7 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
   min-width: 130px;
   max-width: 130px;
 }
+
 .thread-user-img {
   max-width: 70px;
   max-height: 85px;
@@ -532,6 +644,14 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
   position: absolute;
   bottom: 10px;
   right: 25px;
+}
+
+.comment-favorite-discussion {
+  display: flex;
+  position: relative;
+  top: 127px;
+  color: #FFF;
+  height: 30px;
 }
 
 .favorite {

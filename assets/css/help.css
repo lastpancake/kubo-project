@@ -1,34 +1,109 @@
+.faq {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin-bottom: 100px;
+
+}
+
 .faq ul {
   list-style-type: none;
+  width: 800px;
 }
 
 .faq li {
+  position: relative;
   line-height: 1,2em;
   border-top: 2px solid #1D4C8F;
   padding: 15px;
 }
 
-.manualer {
+.faq p {
+text-align: right;
+}
+
+.myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 20px;
+
+}
+#myDIV, #myDIV1, #myDIV2, #myDIV3, #myDIV4, #myDIV5, #myDIV6 {
+    width: 100%;
+    padding: 50px 0;
+    text-align: left;
+    margin-top: 20px;
+    display: none;
+}
+
+
+.plus-button{
+  display: flex;
+  position: absolute;
+  right: 20px;
+  top: 2px;
+  background-color: #fff;
+  color: black;
+  padding: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+
+.help-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.help-flex > .manual_kasse {
+  max-width: calc(100% * (5/1));
 }
 
 .manual_kasse {
-height: 500px;
-width: 280px;
-background-color: #F3F3F4;
-text-align: center;
-align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  min-width: 250px;
+  background-color: #F3F3F4;
+  margin-right: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.manual_kasse h3 {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.manual_kasse p {
+  font-size: 15px;
 }
 
 .vejledninger {
   width: 80%;
-  height: 100px;
   border-top: 2px solid #1D4C8F;
   border-bottom: 2px solid #1D4C8F;
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+.vejledninger a {
+  text-decoration: underline;
 }
 
 .download_btn {
   height: 40px;
-  width: 100px;
+  width: 170px;
   background-color: #1D4C8F;
   color: #fff;
+  border-radius:5px;
 }

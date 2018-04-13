@@ -1,53 +1,51 @@
-function Comment(image, name, date, text) {
+function DiscussionComment(image, name, date, text) {
   this.imageSrc = image;
   this.userName = name;
   this.dateOfPost = date;
   this.text = text;
 }
 
-function getLocalComment() {
-  let comments = localStorage.getItem("keduComments");
+function getLocalDiscussionComment() {
+  let comments = localStorage.getItem("discussionComments");
 
   if(comments != null) {
     return JSON.parse(comments);
   }
   else {
-    return [  new Comment("assets/images/Portræt-til-Skype.jpg",
+    return [  new DiscussionComment("assets/images/Portræt-til-Skype.jpg",
                           "Morten Mortensen",
                           "5-11-2017",
-                          "Rigtig god lektion!"),
-              new Comment("assets/images/Portræt-til-Skype.jpg",
+                          "Godt spørgsmål!"),
+              new DiscussionComment("assets/images/Portræt-til-Skype.jpg",
                           "Ulla Arnesen",
                           "5-1-2018",
-                          "Mine elever var rigtig glade for lektionen :-)")];
+                          "Jeg lytter lige med")];
   }
 }
 
 function setLocalComment(origComments) {
-  //converting it to JSON
   let newComments = JSON.stringify(origComments);
 
-  //saving it
-  localStorage.setItem("keduComments", newComments);
+  localStorage.setItem("discussionComments", newComments);
 }
 
 function submitComment(image, name, date, text) {
-  let origComments = getLocalComment();
+  let origComments = getLocalDiscussionComment();
 
-  let newComment = new Comment(image, name, date, text)
-  //appending it
+  let newComment = new DiscussionComment(image, name, date, text)
+
   origComments.push(newComment);
 
   setLocalComment(origComments);
 }
 
 function buildList() {
-  let comments = getLocalComment();
+  let comments = getLocalDiscussionComment();
 
-  let commentsDiv = document.querySelector(".comments");
+  let commentsDiv = document.querySelector(".comments-discussion");
   commentsDiv.innerHTML = "";
 
-  for(let i = comments.length - 1; i > -1; i--) {
+  for(let i = 0; i < comments.length; i++) {
     let pBox = document.createElement("div");
     pBox.classList.add("p-box");
 
