@@ -52,7 +52,7 @@ function buildList() {
     pBox.classList.add("p-box");
 
     var flexDiv = document.createElement("div");
-    flexDiv.classList.add("flex-div-vertical");
+    flexDiv.classList.add("flex-div-comment");
 
     var userInfo = document.createElement("div");
     userInfo.classList.add("user-info");

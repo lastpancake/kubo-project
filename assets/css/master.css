@@ -13,12 +13,11 @@ body {
   display: grid;
   line-height: 1.6em;
   font-size: 18px;
-  grid-template-areas:  "head head head"
-                        "nav nav nav"
+  grid-template-areas:
                         "left main right"
                         "foot foot foot";
-  grid-template-columns: 1fr 1.5fr 1fr;
-  grid-template-rows: 75px 75px auto 200px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 200px;
 }
 
 a {
@@ -28,12 +27,14 @@ a {
 
 h1 {
   margin-top: 2em;
+  margin-top: 3em;
   margin-bottom: 1em;
   font-family: 'Cabin Sketch';
   text-align: center;
 }
 
 h2 {
+  font-size: 2em;
   margin-top: 3em;
   margin-bottom: 1em;
   font-family: 'Cabin Sketch';
@@ -41,23 +42,35 @@ h2 {
 }
 
 h3 {
+}
 
+.center-head {
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 header {
-  grid-area: head;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
   background: #044c7f;
   color: white;
   line-height: 70px;
   text-align: center;
+  z-index: 1000;
+  height: 70px;
 }
 
 nav {
-  grid-area: nav;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  margin-top: 70px;
   background: #f1f1f2;
 	line-height: 70px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
+  z-index: 1000;
 }
 
 main {
@@ -75,9 +88,9 @@ footer {
 header > img {
   height: 50px;
   vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-
 
 nav > ul > li {
   display: inline-block;
@@ -91,6 +104,41 @@ nav > ul > li > a {
   font-weight: bold;
 }
 
+#velkommen-billede {
+  min-width: 100%;
+  opacity: .6;
+  z-index: -1000;
+}
+
+#velkommen {
+  margin-top: 150px;
+}
+
+#velkommen-h2, #velkommen-h3 {
+  text-shadow: 0 2px 2px rgba(4, 20, 20, 0.25);
+}
+
+#velkommen-h2 {
+  font-weight: normal;
+  font-size: 4em;
+  margin-bottom: 40px;
+}
+
+#velkommen-h3 {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#relaterede-opslag-h3 {
+  font-weight: normal;
+  text-decoration: none;
+  color: #FFF;
+}
+
+#news {
+  margin-top: 220px;
+}
+
 .menu_item a:hover {
   background-color: black;
   color: white;
@@ -99,20 +147,24 @@ nav > ul > li > a {
 
 .left {
   margin: 20px;
+  margin-top: 270px;
 }
 
 .center {
   margin: 20px;
   min-width: 650px;
+  margin-top: 200px;
 }
 
 .comments {
   margin: 20px;
+
 }
 
 .right {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 270px;
 }
 
 .lesson-info {
@@ -136,7 +188,6 @@ nav > ul > li > a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
 }
 
 .lesson-info > .p-box {
@@ -164,6 +215,19 @@ nav > ul > li > a {
   min-width: 200px;
 }
 
+.p-box-small {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 40px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
+  background: white;
+  max-width: 600px;
+  min-width: 200px;
+}
+
 .comments {
   align-self: flex-start;
 }
@@ -176,12 +240,10 @@ nav > ul > li > a {
 }
 
 .post-user {
-  font-style: italic;
   font-weight: bold;
 }
 
 .post-date {
-  font-style: italic;
   font-weight: bold;
 }
 
@@ -196,6 +258,8 @@ nav > ul > li > a {
 .add-comment {
   margin-top: 50px;
   margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 input[type=text], textarea {
@@ -223,22 +287,27 @@ button {
   cursor: pointer;
 }
 
-.flex-div-vertical {
+.flex-div-comment {
     display: flex;
 }
 
-.new-lessons, .news {
+.new-lessons, .news, .lessons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .new-lessons > a {
-  max-width: 25%;
+  max-width: calc(100% * (1/4));
 }
 
-.news {
+.news > a {
+  max-width: calc(100% * (1/4));
+}
 
+.lessons > a {
+  max-width: calc(100% * (1/4));
 }
 
 .lesson-overview > img {
@@ -256,7 +325,11 @@ span > img {
   vertical-align: middle;
 }
 
-
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .lesson-image > img {
   width: auto;
@@ -266,29 +339,60 @@ span > img {
 .new-lesson-box, .news-box {
   margin: 2px;
   padding: 5px;
-  background: lightblue;
-  min-height: 400px;
+  background: #00a19b;
+  height: 300px;
   text-align: center;
   font-size: 13px;
   min-width: 170px;
   max-width: 180px;
 }
 
+.news-title, .news-likes, .news-comments {
+  color: #FFF;
+  font-weight: normal;
+}
+
 .news-box {
   min-width: 170px;
   max-width: 180px;
+  margin-bottom: 20px;
+}
+
+.lesson-box {
+  position: relative;
+  max-width: 100%;
+  max-height: 325px;
+  overflow: hidden;
+  margin: 5px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.lesson-box > .lesson-text {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  padding: 5%;
+  width: 100%;
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.lesson {
+
 }
 
 .news-likes, .news-comments {
-  max-width: 30%;
-  min-width: 30%;
-  text-align: right;
+  max-width: 25px;
+  min-width: 25px;
+  text-align: left;
+  margin-left: 5px;
 }
 
 .news-info > img {
   height: 16px;
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 30px;
 }
 
 .news-info {
@@ -306,7 +410,7 @@ span > img {
 
 }
 
-.new-lesson-span > a, post-title {
+.new-lesson-span > a, .post-title {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -328,21 +432,131 @@ span > img {
 }
 
 .check-flex > div > input {
-  margin: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .test {
   background: #f1f1f2;
 }
 
+/* for fællesskab */
+
+.thread-check-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 30px 40px 30px;
+}
+
+.thread-container {
+  display: block;
+  width: auto;
+  min-height: 500px;
+}
+
+.thread-box {
+  display: flex;
+  min-width: 650px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-style: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
+  position: relative;
+}
+
+.l-blue {
+  background: rgb(33, 99, 147);
+}
+
+.green {
+  background: rgb(0, 162, 155);
+}
+
+.blue {
+  background: rgb(4, 76, 127);
+}
+
+.thread {
+  display: flex;
+  color: white;
+}
+
+.thread-user-info {
+  font-size: 14px;
+  min-width: 130px;
+  max-width: 130px;
+}
+.thread-user-img {
+  max-width: 70px;
+  max-height: 85px;
+}
+
+.thread-user {
+  line-height: 1.4em;
+  font-style: italic;
+}
+
+.thread-date {
+  line-height: 1.4em;
+  font-style: italic;
+}
+
+.thread-text {
+  max-width: 410px;
+  max-height: 80px;
+}
+
+.comment-favorite {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 25px;
+}
+
+.favorite {
+  padding: 2px 5px 0 5px;
+}
+
+.comment {
+  padding: 3px 5px 0 10px;
+}
+
+.read-more-btn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 30px;
+}
+
+/* Smaller screensizes */
+
+@media (max-width: 1200px) {
+  .new-lessons > a {
+    max-width: calc(100% * (1/3));
+  }
+
+  .news > a {
+    max-width: calc(100% * (1/3));
+  }
+
+  .lessons > a {
+    max-width: calc(100% * (1/3));
+  }
+}
+
 @media (max-width: 800px) {
   body {
-    grid-template-areas:  "head"
-                          "nav"
+    grid-template-areas:
+
                           "main"
+                          "right"
+                          "left"
                           "foot";
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 75px auto 100px;
+    grid-template-rows: auto auto auto 100px;
   }
 
   main {
@@ -350,23 +564,133 @@ span > img {
     justify-content: center;
   }
 
+  header {
+    height: 80px;
+  }
+
+  nav {
+    margin-top: 80px;
+    height: 80px;
+  }
+
   .left {
     grid: left;
     width: auto;
+    margin-top: 70px;
   }
 
   .center {
     width: auto;
     order: 1;
+    margin-top: 180px;
   }
 
   .right {
     grid: right;
     width: auto;
+    margin-top: 70px;
   }
 
   .comments {
     width: auto;
     order: 4;
+  }
+}
+
+@media (max-width: 700px) {
+  .new-lessons > a {
+    max-width: calc(100% * (1/2));
+  }
+
+  .news > a {
+    max-width: calc(100% * (1/2));
+  }
+
+  .lessons > a {
+    max-width: calc(100% * (1/2));
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 30px;
+    line-height: 2em;
+    grid-template-areas:
+                          "main"
+                          "left"
+                          "right"
+                          "foot";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 100px;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  nav {
+    margin-top: 80px;
+    height: 80px;
+  }
+
+  .left {
+    grid: left;
+    width: auto;
+    margin-top: 20px;
+  }
+
+  .center {
+    width: auto;
+    order: 1;
+    margin-top: 200px;
+  }
+
+  .right {
+    grid: right;
+    width: auto;
+    margin-top: 20px;
+  }
+
+  .comments {
+    width: auto;
+    order: 4;
+  }
+
+  .flex-div-comment {
+    flex-direction: column;
+  }
+
+  .user-info {
+  }
+
+  input[type=text], textarea {
+      width: 100%;
+      height: 250px;
+  }
+
+  button {
+    padding: 24px 40px;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 200px) {
+
+
+  .new-lessons > a {
+    max-width: calc(100%);
+  }
+
+  .news > a {
+    max-width: calc(100% * (1/1));
+  }
+
+  .lessons > a {
+    max-width: calc(100% * (1/1));
   }
 }
