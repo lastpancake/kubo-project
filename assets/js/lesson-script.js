@@ -6,7 +6,7 @@ function Comment(image, name, date, text) {
 }
 
 function getLocalComment() {
-  var comments = localStorage.getItem("keduComments");
+  let comments = localStorage.getItem("keduComments");
 
   if(comments != null) {
     return JSON.parse(comments);
@@ -25,16 +25,16 @@ function getLocalComment() {
 
 function setLocalComment(origComments) {
   //converting it to JSON
-  var newComments = JSON.stringify(origComments);
+  let newComments = JSON.stringify(origComments);
 
   //saving it
   localStorage.setItem("keduComments", newComments);
 }
 
 function submitComment(image, name, date, text) {
-  var origComments = getLocalComment();
+  let origComments = getLocalComment();
 
-  var newComment = new Comment(image, name, date, text)
+  let newComment = new Comment(image, name, date, text)
   //appending it
   origComments.push(newComment);
 
@@ -42,49 +42,49 @@ function submitComment(image, name, date, text) {
 }
 
 function buildList() {
-  var comments = getLocalComment();
+  let comments = getLocalComment();
 
-  var commentsDiv = document.querySelector(".comments");
+  let commentsDiv = document.querySelector(".comments");
   commentsDiv.innerHTML = "";
 
-  for(var i = comments.length - 1; i > -1; i--) {
-    var pBox = document.createElement("div");
+  for(let i = comments.length - 1; i > -1; i--) {
+    let pBox = document.createElement("div");
     pBox.classList.add("p-box");
 
-    var flexDiv = document.createElement("div");
+    let flexDiv = document.createElement("div");
     flexDiv.classList.add("flex-div-comment");
 
-    var userInfo = document.createElement("div");
+    let userInfo = document.createElement("div");
     userInfo.classList.add("user-info");
 
-    var userImgDiv = document.createElement("div");
+    let userImgDiv = document.createElement("div");
     userImgDiv.classList.add("post-user-img");
-    var userImg = document.createElement("img");
+    let userImg = document.createElement("img");
     userImg.src = comments[i].imageSrc;
 
     userImgDiv.appendChild(userImg);
     userInfo.appendChild(userImgDiv);
 
-    var postUser = document.createElement("div");
+    let postUser = document.createElement("div");
     postUser.classList.add("post-user");
     postUser.innerHTML = "" + comments[i].userName;
 
     userInfo.appendChild(postUser);
 
-    var postDate = document.createElement("div");
+    let postDate = document.createElement("div");
     postDate.classList.add("post-date");
     postDate.innerHTML = "" + comments[i].dateOfPost;
 
     userInfo.appendChild(postDate);
     flexDiv.appendChild(userInfo);
 
-    var commentDiv = document.createElement("div");
+    let commentDiv = document.createElement("div");
     commentDiv.classList.add("comment");
 
-    var commentText = document.createElement("div");
+    let commentText = document.createElement("div");
     commentText.classList.add("text");
 
-    var commentSpan = document.createElement("span");
+    let commentSpan = document.createElement("span");
     commentSpan.innerHTML = comments[i].text;
 
     commentText.appendChild(commentSpan);
@@ -103,11 +103,11 @@ window.onload = function() {
 var submitBtn = document.querySelector("#addCommentBtn");
 
 submitBtn.addEventListener("click", function() {
-  var userImage = "assets/images/Portræt-til-Skype.jpg";
-  var userName = "Mathias Poulsen";
-  var time = new Date();
-  var date = time.getDate() + "-" + time.getMonth() + "-" + time.getFullYear();
-  var text = document.querySelector("#addCommentText");
+  let userImage = "assets/images/Portræt-til-Skype.jpg";
+  let userName = "Mathias Poulsen";
+  let time = new Date();
+  let date = time.getDate() + "-" + time.getMonth() + "-" + time.getFullYear();
+  let text = document.querySelector("#addCommentText");
 
   submitComment(userImage, userName, date, text.value);
 

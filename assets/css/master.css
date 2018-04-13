@@ -85,6 +85,13 @@ footer {
   background: #044c7f;
 }
 
+hr {
+  margin-top: 100px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 3px;
+}
+
 header > img {
   height: 50px;
   vertical-align: middle;
@@ -165,6 +172,16 @@ nav > ul > li > a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 270px;
+}
+
+.right > a > .lesson-box {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right > a > .lesson-box > img {
+  max-height: 100%;
 }
 
 .lesson-info {
@@ -295,7 +312,7 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .new-lessons > a {
@@ -366,6 +383,23 @@ span > img {
   margin: 5px;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: white;
+}
+
+.lesson-box:hover .overlay {
+  opacity: 0.4;
 }
 
 .lesson-box > .lesson-text {
@@ -512,7 +546,7 @@ span > img {
 .comment-favorite {
   display: flex;
   position: absolute;
-  top: 110px;
+  bottom: 10px;
   right: 25px;
 }
 
