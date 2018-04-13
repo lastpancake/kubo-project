@@ -21,7 +21,7 @@
               <a href="lessons.html">Lektioner</a>
             </li>
             <li>
-              <a href="#">Fællesskab</a>
+              <a href="community.html">Fællesskab</a>
             </li>
             <li>
               <a href="help.html">Hjælp</a>
@@ -47,21 +47,75 @@
             <div class="faq">
 
                 <ul>
-                  <li>Hvordan virker KUBO?</li>
-                  <li>Skal jeg være på nettet for at kunne bruge KUBO?</li>
-                  <li>Hvad er loops og parametre</li>
+                  <li>Hvordan virker KUBO?<button class="plus-button" onclick="myFunction()">+</button>
+                    <div id="myDIV">
+                    KUBO fungerer ved at løbe over TagTiles og læse RFID-mikrochipsne
+                    indlejret i dem for at udføre handlinger som at dreje til højre,
+                    gå lige, læse funktioner og udføre loops.
+                    </div>
+                </li>
+
+                  <li>Skal jeg være på nettet for at kunne bruge KUBO?
+                    <button class="plus-button" onclick="myFunction1()">+</button>
+                      <div  id="myDIV1">
+                        KUBO virker ved at læse RFID-mikrochipsne indlejret i TagTiles.
+                        Dette gør KUBO og dets TagTile programmeringssprog fuldstændig uden skærm,
+                        så en internetforbindelse er ikke påkrævet for at starte kodning med dem!
+                      </div>
+                  </li>
+
+                  <li>Hvad er loops og parametre
+
+                    <button class="plus-button" onclick="myFunction2()">+</button>
+                      <div  id="myDIV2">
+                        Indføje den rute, du vil have, at KUBO skal gentage inden for loop
+                        TagTiles og spalte en parameter TagTile (1-10) i det medfølgende rum
+                        for at angive, hvor mange gange du vil have sekvensen gentaget.
+                      </div>
+                  </li>
+
                   <li>Hvad er tilbagevendene funktion?<br>
-                      Hvordan laver jeg det ved hjælp af TagTiles?</li>
-                  <li>Hvordan tænder jeg KUBO?</li>
+                      Hvordan laver jeg det ved hjælp af TagTiles?
+                      <button class="plus-button" onclick="myFunction3()">+</button>
+                        <div  id="myDIV3">
+                          Indføje den rute, du vil have, at KUBO skal gentage inden for loop
+                          Hvis du vil have KUBO at gentage en sekvens på ubestemt tid, skal
+                          du bygge en rekursiv funktion.
+                        </div>
+                    </li>
+
+                  <li>Hvordan tænder jeg KUBO?
+                    <button class="plus-button" onclick="myFunction4()">+</button>
+                      <div  id="myDIV4">
+                        Klik KUBOs hoved og krop sammen for at tænde den!
+                      </div>
+                  </li>
+
                   <li>Hvad er ruter og funktioner?
-                      Hvordan laver jeg dem?</li>
-                  <li>Hvordan skal jeg udarbejde lektioner med KUBO?</li>
+                      Hvordan laver jeg dem?
+                      <button class="plus-button" onclick="myFunction5()">+</button>
+                        <div  id="myDIV5">
+                          En rute er en sti lavet af bevægelse TagTiles for at KUBO skal følge.
+                          Funktionen og spil TagTiles kan bruges til at gemme disse ruter og
+                          gøre KUBO "memorere" dem.
+                        </div>
+                    </li>
+
+                  <li>Hvordan skal jeg udarbejde lektioner med KUBO?
+                    <button class="plus-button" onclick="myFunction6()">+</button>
+                      <div  id="myDIV6">
+                        Du har fleksibilitet til at designe dine egne opgaver med KUBO og TagTiles.
+                        Ved design af øvelser til KUBO er himlen grænsen! Men hvis du leder efter inspiration,
+                        kan du finde den i vores kodningslicens! Vi giver også et tomt kort i vores klassesæt,
+                        så du og dine elever kan designe dine egne omgivelser for at KUBO kan udforske!
+                      </div>
+                  </li>
+
                 </ul>
             </div>
 
         </div>
 
-      </div>
 
       <div class="center">
           <h2>Manualer</h2>
@@ -69,6 +123,7 @@
           <div class="help-flex">
 
             <div class="manual_kasse">
+
               <h3>Dansk</h3>
               <p>Her kan du finde de nødvendige vejledninger
                 til at komme godt i gang med KUBO</p>
@@ -102,11 +157,11 @@
           <div class="manual_kasse">
             <h3>Suomalainen</h3>
             <p>Täältä löydät tarvittavat ohjeet
-              KUBOn aloittamiseksi</p>
+              KUBOn aloittamiseksi<br><br></p>
 
             <div class="vejledninger">
-                <a href="">käyttöopas</a> <br>
-                <a href="">opettajan opas</a><br>
+                <a href="">Käyttöopas</a> <br>
+                <a href="">Opettajan opas</a><br>
                 <a href="">Huijata arkki</a>
             </div>
 
@@ -150,5 +205,9 @@
           </div>
     </main>
 
+    <footer>
+
+    </footer>
+ <script src="assets/js/help_script.js" charset="utf-8"></script>
   </body>
 </html>
