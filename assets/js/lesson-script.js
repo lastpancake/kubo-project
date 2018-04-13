@@ -106,7 +106,7 @@ submitBtn.addEventListener("click", function() {
   let userImage = "assets/images/Portræt-til-Skype.jpg";
   let userName = "Mathias Poulsen";
   let time = new Date();
-  let date = time.getDate() + "-" + time.getMonth() + "-" + time.getFullYear();
+  let date = time.getDate() + "-" + (time.getMonth() + 1) + "-" + time.getFullYear();
   let text = document.querySelector("#addCommentText");
 
   submitComment(userImage, userName, date, text.value);
