@@ -71,12 +71,11 @@ text-align: right;
   height: 500px;
   min-width: 250px;
   background-color: #F3F3F4;
-  margin-right: 20px;
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
   padding: 20px;
+  margin: 50px 20px 120px 0px;
 }
 
 .manual_kasse h3 {
@@ -105,5 +104,14 @@ text-align: right;
   width: 170px;
   background-color: #1D4C8F;
   color: #fff;
-  border-radius:5px;
+  border-radius: 5px;
+  text-align:center;
+  vertical-align: middle;
+  display: table;
+}
+
+.download_btn p {
+  text-align:center;
+  vertical-align: middle;
+  display: table-cell;
 }
