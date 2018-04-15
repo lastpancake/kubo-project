@@ -634,6 +634,10 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
   max-height: 85px;
 }
 
+.thread-user-img img {
+  max-width: 70px;
+}
+
 .thread-user {
   line-height: 1.4em;
   font-style: italic;
