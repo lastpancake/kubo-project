@@ -180,8 +180,9 @@ nav > ul > li > a {
 }
 
 .left {
-  margin: 20px;
-  margin-top: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 280px;
 }
 
 .center {
@@ -193,7 +194,7 @@ nav > ul > li > a {
 .right {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 270px;
+  margin-top: 280px;
 }
 
 .right > a > .lesson-box {
@@ -288,6 +289,10 @@ nav > ul > li > a {
 .comments {
   align-self: flex-start;
   margin: 20px;
+}
+
+#comment-head {
+  margin-top: 80px;
 }
 
 .user-info {
@@ -385,7 +390,7 @@ button {
 
 span {
   margin-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   display: block;
   max-width: 750px;
 }
