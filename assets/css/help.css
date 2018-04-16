@@ -117,3 +117,49 @@ text-align: right;
   vertical-align: middle;
   display: table-cell;
 }
+
+footer {
+  grid-area: foot;
+  background: #044c7f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.logo-footer {
+  height: 100px;
+  width: 380px;
+  align-content: center;
+}
+
+.logo-footer img {
+  height: 50px;
+  width: 100px;
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.adress {
+  align-content: center;
+  text-align: center;
+  width: 380px;
+}
+
+.adress p{
+  color: #fff;
+  line-height: 1.4em;
+  font-size: 0.8em;
+  text-align: left;
+  display: inline-block;
+}
+
+.social-icons {
+  width: 380px;
+}
+
+.social-icons img  {
+  margin: 0px 0px 0px 20px;
+
+}
