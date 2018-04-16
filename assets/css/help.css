@@ -124,7 +124,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 .logo-footer {
@@ -161,4 +161,5 @@ footer {
 
 .social-icons img  {
   margin: 0px 0px 0px 20px;
+
 }
