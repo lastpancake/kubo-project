@@ -6,7 +6,8 @@
     <title></title>
     <link rel="stylesheet" href="assets/css/master.css">
     <link rel="stylesheet" href="assets/css/help.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -47,7 +48,7 @@
             <div class="faq">
 
                 <ul>
-                  <li>Hvordan virker KUBO?<button class="plus-button" onclick="myFunction()">+</button>
+                  <li>Hvordan virker KUBO?<button class="plus-button" id="btn0" onclick="myFunction()">+</button>
                     <div id="myDIV">
                     KUBO fungerer ved at løbe over TagTiles og læse RFID-mikrochipsne
                     indlejret i dem for at udføre handlinger som at dreje til højre,
@@ -56,7 +57,7 @@
                 </li>
 
                   <li>Skal jeg være på nettet for at kunne bruge KUBO?
-                    <button class="plus-button" onclick="myFunction1()">+</button>
+                    <button class="plus-button" id="btn1" onclick="myFunction1()">+</button>
                       <div  id="myDIV1">
                         KUBO virker ved at læse RFID-mikrochipsne indlejret i TagTiles.
                         Dette gør KUBO og dets TagTile programmeringssprog fuldstændig uden skærm,
@@ -66,7 +67,7 @@
 
                   <li>Hvad er loops og parametre
 
-                    <button class="plus-button" onclick="myFunction2()">+</button>
+                    <button class="plus-button" id="btn2" onclick="myFunction2()">+</button>
                       <div  id="myDIV2">
                         Indføje den rute, du vil have, at KUBO skal gentage inden for loop
                         TagTiles og spalte en parameter TagTile (1-10) i det medfølgende rum
@@ -76,7 +77,7 @@
 
                   <li>Hvad er tilbagevendene funktion?<br>
                       Hvordan laver jeg det ved hjælp af TagTiles?
-                      <button class="plus-button" onclick="myFunction3()">+</button>
+                      <button class="plus-button" id="btn3" onclick="myFunction3()">+</button>
                         <div  id="myDIV3">
                           Indføje den rute, du vil have, at KUBO skal gentage inden for loop
                           Hvis du vil have KUBO at gentage en sekvens på ubestemt tid, skal
@@ -85,7 +86,7 @@
                     </li>
 
                   <li>Hvordan tænder jeg KUBO?
-                    <button class="plus-button" onclick="myFunction4()">+</button>
+                    <button class="plus-button" id="btn4" onclick="myFunction4()">+</button>
                       <div  id="myDIV4">
                         Klik KUBOs hoved og krop sammen for at tænde den!
                       </div>
@@ -93,7 +94,7 @@
 
                   <li>Hvad er ruter og funktioner?
                       Hvordan laver jeg dem?
-                      <button class="plus-button" onclick="myFunction5()">+</button>
+                      <button class="plus-button" id="btn5" onclick="myFunction5()">+</button>
                         <div  id="myDIV5">
                           En rute er en sti lavet af bevægelse TagTiles for at KUBO skal følge.
                           Funktionen og spil TagTiles kan bruges til at gemme disse ruter og
@@ -102,7 +103,7 @@
                     </li>
 
                   <li>Hvordan skal jeg udarbejde lektioner med KUBO?
-                    <button class="plus-button" onclick="myFunction6()">+</button>
+                    <button class="plus-button" id="btn6" onclick="myFunction6()">+</button>
                       <div  id="myDIV6">
                         Du har fleksibilitet til at designe dine egne opgaver med KUBO og TagTiles.
                         Ved design af øvelser til KUBO er himlen grænsen! Men hvis du leder efter inspiration,
