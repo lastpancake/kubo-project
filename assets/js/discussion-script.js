@@ -12,11 +12,11 @@ function getLocalDiscussionComment() {
     return JSON.parse(comments);
   }
   else {
-    return [  new DiscussionComment("assets/images/Portræt-til-Skype.jpg",
+    return [  new DiscussionComment("assets/images/man-1.jpg",
                           "Morten Mortensen",
                           "5-11-2017",
                           "Godt spørgsmål!"),
-              new DiscussionComment("assets/images/Portræt-til-Skype.jpg",
+              new DiscussionComment("assets/images/woman-2.jpg",
                           "Ulla Arnesen",
                           "5-1-2018",
                           "Jeg lytter lige med")];
