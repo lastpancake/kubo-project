@@ -117,3 +117,31 @@ text-align: right;
   vertical-align: middle;
   display: table-cell;
 }
+
+footer {
+  grid-area: foot;
+  background: #044c7f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.logo-footer {
+  height: 100px;
+  width: 100px;
+  margin: 20px 0px 0px 0px;
+}
+
+.adress {
+  text-align: left;
+}
+
+.adress p{
+  color: #fff;
+  line-height: 1.4em;
+  font-size: 0.8em;
+}
+
+.social-icons img  {
+  margin: 20px 0px 0px 30px;
+}
