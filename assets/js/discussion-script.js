@@ -32,7 +32,7 @@ function setLocalComment(origComments) {
 function submitComment(image, name, date, text) {
   let origComments = getLocalDiscussionComment();
 
-  let newComment = new DiscussionComment(image, name, date, text)
+  let newComment = new DiscussionComment(image, name, date, text);
 
   origComments.push(newComment);
 
