@@ -123,13 +123,14 @@ footer {
   background: #044c7f;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding: 20px 0px 0px 0px;
 }
 
 .logo-footer {
   height: 100px;
   width: 100px;
-  margin: 20px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .adress {
@@ -143,5 +144,5 @@ footer {
 }
 
 .social-icons img  {
-  margin: 20px 0px 0px 30px;
+  margin: 0px 0px 0px 30px;
 }
