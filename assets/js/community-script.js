@@ -162,6 +162,7 @@ function buildList() {
     threadContainer.classList.add("thread-container");
 
     let threadHeading = document.createElement("h3");
+    threadHeading.setAttribute("id", category.name);
     threadHeading.innerHTML = category.text;
 
     threadContainer.appendChild(threadHeading);
@@ -256,3 +257,13 @@ function buildList() {
 window.onload = function() {
   buildList();
 }
+
+function offsetAnchor() {
+    if(location.hash.length !== 0) {
+        window.scrollTo(window.scrollX, window.scrollY - 170);
+    }
+}
+
+window.addEventListener("hashchange", offsetAnchor);
+
+window.setTimeout(offsetAnchor, 1);
