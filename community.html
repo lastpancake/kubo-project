@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="da" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title></title>
+    <title>KEDU - Fællesskab</title>
+    <link rel="icon" href="assets/images/icon.ico">
+    <meta name="description" content="KUBO.education også kaldet KEDU er hjemmesiden hvor folk som er interesserede i KUBO kan diskutere, få hjælp, og dele viden. KUBO er en uddannelsesrobot som hjælper børn fra børnehaveklasse op til 5. klasse med at lære at kode."/>
     <link rel="stylesheet" href="assets/css/master.css">
     <link rel="stylesheet" href="assets/css/community.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
@@ -11,7 +13,10 @@
   </head>
   <body>
     <header>
-      <img src="assets/images/kedu-logo-white.png" alt="">
+      <a href="index.html">
+        <img src="assets/images/kedu-logo-white.png" alt="KEDU Logo">
+      </a>
+      <img class="account-icon" src="assets/images/account.svg" alt="Account icon">
     </header>
 
     <nav>
@@ -35,9 +40,7 @@
     <div class="left">
 
       <div id="addPostDiv">
-        <a href="add-discussion.html">
-          <button type="button" name="button" id="addPost">Opret indlæg</button>
-        </a>
+        <button type="button" name="button" id="addPost">Opret indlæg</button>
 
         <ul>
           <li>
@@ -60,38 +63,38 @@
           <div class="thread-check-subject">
             <div class="thread-check-flex">
               <div class="">
-                <input type="checkbox" name="" value="">Dansk
+                <input type="checkbox" name="danish" value="">Dansk
               </div>
               <div class="">
-                <input type="checkbox" name="" value="">Engelsk
+                <input type="checkbox" name="english" value="">Engelsk
               </div>
               <div class="">
-                <input type="checkbox" name="" value="">Fysik/Kemi
+                <input type="checkbox" name="physics" value="">Fysik/Kemi
               </div>
               <div class="">
-                <input type="checkbox" name="" value="">Tysk
+                <input type="checkbox" name="german" value="">Tysk
               </div>
               <div class="">
-                <input type="checkbox" name="" value="">Kode
+                <input type="checkbox" name="code" value="">Kode
               </div>
             </div>
           </div>
           <div class="thread-check-class">
             <div class="thread-check-flex">
               <div class="">
-                <input type="checkbox" name="" value="">1. klasse
+                <input type="checkbox" name="firstGrade" value="">1. klasse
               </div>
               <div class="">
-                <input type="checkbox" name="" value="">2. klasse
+                <input type="checkbox" name="secondGrade" value="">2. klasse
               </div>
               <div class="">
-                <input type="checkbox" name="" value="">3. klasse
+                <input type="checkbox" name="thirdGrade" value="">3. klasse
               </div>
               <div class="">
-                <input type="checkbox" name="" value="">4. klasse
+                <input type="checkbox" name="forthGrade" value="">4. klasse
               </div>
               <div class="">
-                <input type="checkbox" name="" value="">5. klasse
+                <input type="checkbox" name="fifthGrade" value="">5. klasse
               </div>
             </div>
           </div>
@@ -101,360 +104,6 @@
 
         <div class="threads">
 
-          <div class="thread-container">
-            <h3 id="kubo-robot">KUBO Robotten</h3>
-              <a href="discussion.html">
-              <div class="thread-box l-blue">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/woman-2.jpg" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Dorte Nielsen</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>03-04-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Vores nye kuborobot vil ikke tænde! Den er opladt og opdateret. Hvad gør vi?</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    8
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    15
-                  </div>
-
-                </div>
-              </div>
-            </a>
-              <div class="thread-box l-blue">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/man-1.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Mads Hansen</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>23-03-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Jeg har kun hørt lidt om KUBO, hvad er det helt præcist den kan?</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    13
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    21
-                  </div>
-                </div>
-              </div>
-              <div class="thread-box l-blue">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/woman-1.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Inger Sørensen</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>17-03-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Hvordan oplader jeg min Kubo?</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    2
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    5
-                  </div>
-                </div>
-              </div>
-              <div class="thread-box l-blue">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/man-2.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Lars Larsen</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>14-01-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Kodning går over min forstand. Hvad kan man bruge rekursive funktioner til?</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    18
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    35
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="thread-container">
-            <h3 id="kedu-universe">KEDU Universet</h3>
-            <div class="">
-              <div class="thread-box green">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/woman-1.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Lis Lauerbæk</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>16-04-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Jeg har nogle problemer med min profil indstillinger</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    0
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    3
-                  </div>
-                </div>
-              </div>
-              <div class="thread-box green">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/man-2.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Erik Nielsen</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>05-04-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Velkommen til alle de nye medlemmer! Her er nogle regler som jeg vil bede jer alle om at...</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    47
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    12
-                  </div>
-                </div>
-              </div>
-              <div class="thread-box green">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/woman-1.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Lotte Hansen</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>22-03-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Hej! Jeg er ny her på siden</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    3
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    20
-                  </div>
-                </div>
-              </div>
-              <div class="thread-box green">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/woman-2.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Katrine Frisk</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>18-02-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Hvem skal jeg spørge, hvis jeg gerne vil vide mere om KUBO?</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    1
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    3
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="thread-container">
-            <h3 id="kubo-accessories">KUBO Tilbehør</h3>
-            <div class="">
-              <div class="thread-box blue">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/woman-1.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Henriette Pedersen</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>02-03-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Er det muligt at købe flere TagTiles? Mine elever kom til at ødelægge vores...</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    15
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    12
-                  </div>
-                </div>
-              </div>
-              <div class="thread-box blue">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/man-1.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Anders Nielsen Sørensen</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>28-02-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Hvornår udkommer TagTiles til at lære at stave??</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    48
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    13
-                  </div>
-                </div>
-              </div>
-              <div class="thread-box blue">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/man-1.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Peter Vildberg</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>16-02-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Kan man bruge almindelige opladere til KUBO? Eller skal man købe nogen fra deres shop hvis...</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    2
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    3
-                  </div>
-                </div>
-              </div>
-              <div class="thread-box blue">
-                <div class="thread">
-                  <div class="thread-user-info">
-                    <div class="thread-user-img">
-                      <img src="assets/images/woman-1.jpg" width="70" alt="">
-                    </div>
-                    <div class="thread-user">
-                      <p>Gertrud Storm Eriksen</p>
-                    </div>
-                    <div class="thread-date">
-                      <p>07-01-2018</p>
-                    </div>
-                  </div>
-                  <div class="thread-text">
-                    <p>Kan man lave sine egne TagTiles? Eller er det kun dem som følger med som kan bruges?</p>
-                  </div>
-                  <div class="comment-favorite">
-                    <div class="favorite">
-                      <img src="assets/images/ic_favorite_white_24px.svg" alt="">
-                    </div>
-                    8
-                    <div class="comment">
-                      <img src="assets/images/ic_comment_white_24px.svg" alt="">
-                    </div>
-                    15
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
         </div>
 
@@ -466,10 +115,36 @@
       </div>
 
     </main>
-    <footer>
 
+    <footer>
+      <div class="logo-footer">
+        <a href="index.html">
+          <img src="assets/images/kedu-logo-white.svg" alt="KEDU Logo">
+        </a>
+      </div>
+
+      <div class="address">
+        <p><a href="https://kubo-robot.com/" target="_blank">KUBO Robotics ApS</a><br>
+           Niels Bohrs Allé 185,<br>
+           5220 Odense SØ<br>
+           SE/CVR-nr.: 37043958
+        <p>
+      </div>
+
+      <div class="social-icons">
+          <img src="assets/images/social-icons/facebook-icon.png" alt="Facebook ikon">
+          <img src="assets/images/social-icons/twitter-icon.png" alt="Twitter ikon">
+          <img src="assets/images/social-icons/youtube-icon.png" alt="Youtube ikon">
+          <img src="assets/images/social-icons/linkedin-icon.png" alt="LinkedIn ikon">
+          <img src="assets/images/social-icons/instagram-icon.png" alt="Instagram ikon">
+          <img src="assets/images/social-icons/snapchat-icon.png" alt="Snapchat ikon">
+      </div>
     </footer>
 
-    <script src="assets/js/community-script.js" charset="utf-8"></script>
+    <div class="message-icon">
+      <img src="assets/images/message.svg" alt="Chat icon">
+    </div>
+
+    <script src="assets/js/community-script.js"></script>
   </body>
 </html>

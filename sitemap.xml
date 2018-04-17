@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://kedu.demodata.dk/</loc>
+  <lastmod>2018-04-17T06:34:18+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/index.html</loc>
+  <lastmod>2018-04-17T06:34:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/lessons.html</loc>
+  <lastmod>2018-04-17T06:41:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/community.html</loc>
+  <lastmod>2018-04-17T06:34:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/help.html</loc>
+  <lastmod>2018-04-17T06:34:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/discussion.html</loc>
+  <lastmod>2018-04-17T06:34:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/lesson.html?introduction</loc>
+  <lastmod>2018-04-17T06:52:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/lesson.html?communication</loc>
+  <lastmod>2018-04-17T06:52:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/lesson.html?collaboration</loc>
+  <lastmod>2018-04-17T06:52:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/lesson.html?creativity</loc>
+  <lastmod>2018-04-17T06:52:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kedu.demodata.dk/lesson.html</loc>
+  <lastmod>2018-04-17T06:52:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

@@ -1,33 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="da" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title></title>
+    <title>KEDU - Hjælp</title>
+    <link rel="icon" href="assets/images/icon.ico">
+    <meta name="description" content="KUBO.education også kaldet KEDU er hjemmesiden hvor folk som er interesserede i KUBO kan diskutere, få hjælp, og dele viden. KUBO er en uddannelsesrobot som hjælper børn fra børnehaveklasse op til 5. klasse med at lære at kode."/>
     <link rel="stylesheet" href="assets/css/master.css">
     <link rel="stylesheet" href="assets/css/help.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
   <body>
     <header>
-      <img src="assets/images/kedu-logo-white.svg" alt="">
+      <a href="index.html">
+        <img src="assets/images/kedu-logo-white.png" alt="KEDU Logo">
+      </a>
+      <img class="account-icon" src="assets/images/account.svg" alt="Account icon">
     </header>
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Forside</a>
-            </li>
-            <li>
-              <a href="lessons.html">Lektioner</a>
-            </li>
-            <li>
-              <a href="community.html">Fællesskab</a>
-            </li>
-            <li>
-              <a href="help.html">Hjælp</a>
-            </li>
-          </ul>
-        </nav>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Forside</a>
+        </li>
+        <li>
+          <a href="lessons.html">Lektioner</a>
+        </li>
+        <li>
+          <a href="community.html">Fællesskab</a>
+        </li>
+        <li>
+          <a href="help.html">Hjælp</a>
+        </li>
+      </ul>
+    </nav>
 
     <div class="left">
 
@@ -47,7 +54,7 @@
             <div class="faq">
 
                 <ul>
-                  <li>Hvordan virker KUBO?<button class="plus-button" onclick="myFunction()">+</button>
+                  <li>Hvordan virker KUBO?<button class="plus-button" id="btn0" onclick="myFunction()">+</button>
                     <div id="myDIV">
                     KUBO fungerer ved at løbe over TagTiles og læse RFID-mikrochipsne
                     indlejret i dem for at udføre handlinger som at dreje til højre,
@@ -56,7 +63,7 @@
                 </li>
 
                   <li>Skal jeg være på nettet for at kunne bruge KUBO?
-                    <button class="plus-button" onclick="myFunction1()">+</button>
+                    <button class="plus-button" id="btn1" onclick="myFunction1()">+</button>
                       <div  id="myDIV1">
                         KUBO virker ved at læse RFID-mikrochipsne indlejret i TagTiles.
                         Dette gør KUBO og dets TagTile programmeringssprog fuldstændig uden skærm,
@@ -66,7 +73,7 @@
 
                   <li>Hvad er loops og parametre
 
-                    <button class="plus-button" onclick="myFunction2()">+</button>
+                    <button class="plus-button" id="btn2" onclick="myFunction2()">+</button>
                       <div  id="myDIV2">
                         Indføje den rute, du vil have, at KUBO skal gentage inden for loop
                         TagTiles og spalte en parameter TagTile (1-10) i det medfølgende rum
@@ -76,7 +83,7 @@
 
                   <li>Hvad er tilbagevendene funktion?<br>
                       Hvordan laver jeg det ved hjælp af TagTiles?
-                      <button class="plus-button" onclick="myFunction3()">+</button>
+                      <button class="plus-button" id="btn3" onclick="myFunction3()">+</button>
                         <div  id="myDIV3">
                           Indføje den rute, du vil have, at KUBO skal gentage inden for loop
                           Hvis du vil have KUBO at gentage en sekvens på ubestemt tid, skal
@@ -85,7 +92,7 @@
                     </li>
 
                   <li>Hvordan tænder jeg KUBO?
-                    <button class="plus-button" onclick="myFunction4()">+</button>
+                    <button class="plus-button" id="btn4" onclick="myFunction4()">+</button>
                       <div  id="myDIV4">
                         Klik KUBOs hoved og krop sammen for at tænde den!
                       </div>
@@ -93,7 +100,7 @@
 
                   <li>Hvad er ruter og funktioner?
                       Hvordan laver jeg dem?
-                      <button class="plus-button" onclick="myFunction5()">+</button>
+                      <button class="plus-button" id="btn5" onclick="myFunction5()">+</button>
                         <div  id="myDIV5">
                           En rute er en sti lavet af bevægelse TagTiles for at KUBO skal følge.
                           Funktionen og spil TagTiles kan bruges til at gemme disse ruter og
@@ -102,7 +109,7 @@
                     </li>
 
                   <li>Hvordan skal jeg udarbejde lektioner med KUBO?
-                    <button class="plus-button" onclick="myFunction6()">+</button>
+                    <button class="plus-button" id="btn6" onclick="myFunction6()">+</button>
                       <div  id="myDIV6">
                         Du har fleksibilitet til at designe dine egne opgaver med KUBO og TagTiles.
                         Ved design af øvelser til KUBO er himlen grænsen! Men hvis du leder efter inspiration,
@@ -118,41 +125,41 @@
 
 
       <div class="center">
-          <h2>Manualer</h2>
+        <h2>Manualer</h2>
 
-          <div class="help-flex">
+        <div class="help-flex">
 
-            <div class="manual_kasse">
+          <div class="manual_kasse">
 
-              <h3>Dansk</h3>
-              <p>Her kan du finde de nødvendige vejledninger
-                til at komme godt i gang med KUBO</p>
-              <div class="vejledninger">
-                <a href="">Brugervejledning</a> <br>
-                <a href="">Lærervejledning</a><br>
-                <a href="">Cheat Sheet</a>
-              </div>
-
-              <div class="download_btn">
-                <p>Hent alle</p>
-              </div>
+            <h3>Dansk</h3>
+            <p>Her kan du finde de nødvendige vejledninger
+              til at komme godt i gang med KUBO</p>
+            <div class="vejledninger">
+              <a href="">Brugervejledning</a> <br>
+              <a href="">Lærervejledning</a><br>
+              <a href="">Cheat Sheet</a>
             </div>
 
-            <div class="manual_kasse">
-              <h3>Svensk</h3>
-              <p>Här hittar du nödvändiga instruktioner
-                 för att komma igång med KUBO</p>
+            <div class="download_btn">
+              <p>Hent alle</p>
+            </div>
+          </div>
 
-              <div class="vejledninger">
-                  <a href="">Användarhandbok</a> <br>
-                  <a href="">Lärarhandledning</a><br>
-                  <a href="">Cheat Sheet</a>
-              </div>
+          <div class="manual_kasse">
+            <h3>Svensk</h3>
+            <p>Här hittar du nödvändiga instruktioner
+               för att komma igång med KUBO</p>
 
-              <div class="download_btn">
-                  <p>Få allt</p>
-             </div>
+            <div class="vejledninger">
+              <a href="">Användarhandbok</a> <br>
+              <a href="">Lärarhandledning</a><br>
+              <a href="">Cheat Sheet</a>
+            </div>
+
+            <div class="download_btn">
+              <p>Få allt</p>
            </div>
+          </div>
 
           <div class="manual_kasse">
             <h3>Suomalainen</h3>
@@ -160,75 +167,81 @@
               KUBOn aloittamiseksi<br><br></p>
 
             <div class="vejledninger">
-                <a href="">Käyttöopas</a> <br>
-                <a href="">Opettajan opas</a><br>
-                <a href="">Huijata arkki</a>
+              <a href="">Käyttöopas</a> <br>
+              <a href="">Opettajan opas</a><br>
+              <a href="">Huijata arkki</a>
             </div>
 
             <div class="download_btn">
-                <p>Hanki kaikki</p>
+              <p>Hanki kaikki</p>
            </div>
-         </div>
-
-         <div class="manual_kasse">
-           <h3>Norsk</h3>
-           <p>Her finner du de nødvendige instruksjonene
-              for å komme i gang med KUBO</p>
-
-           <div class="vejledninger">
-               <a href="">Brukerhåndbok</a> <br>
-               <a href="">lærerveiledningen</a><br>
-               <a href="">Cheat Sheet</a>
-           </div>
-
-           <div class="download_btn">
-               <p>Få alt</p>
           </div>
-        </div>
 
-        <div class="manual_kasse">
-          <h3>English</h3>
-          <p>Here you can find the necessary
-             instructions to get started with KUBO</p>
+          <div class="manual_kasse">
+            <h3>Norsk</h3>
+            <p>
+              Her finner du de nødvendige instruksjonene
+              for å komme i gang med Kubo
+            </p>
 
-          <div class="vejledninger">
-              <a href="">User Manual</a> <br>
-              <a href="">Teacher’s Guide</a><br>
+            <div class="vejledninger">
+              <a href="">Brukerhåndbok</a> <br>
+              <a href="">lærerveiledningen</a><br>
               <a href="">Cheat Sheet</a>
+            </div>
+
+            <div class="download_btn">
+              <p>Få alt</p>
+            </div>
           </div>
 
-          <div class="download_btn">
-              <p>Download all</p>
+          <div class="manual_kasse">
+            <h3>English</h3>
+            <p>Here you can find the necessary
+               instructions to get started with KUBO
+            </p>
+
+            <div class="vejledninger">
+                <a href="">User Manual</a> <br>
+                <a href="">Teacher’s Guide</a><br>
+                <a href="">Cheat Sheet</a>
+            </div>
+
+            <div class="download_btn">
+                <p>Download all</p>
+           </div>
          </div>
-       </div>
 
-          </div>
+       </div>
+      </div>
+
     </main>
 
     <footer>
+      <div class="logo-footer">
+        <a href="index.html">
+          <img src="assets/images/kedu-logo-white.svg" alt="KEDU Logo">
+        </a>
+      </div>
 
-          <div class="logo-footer">
-              <img src="assets/images/kedu-logo-white.svg" alt="">
-          </div>
+      <div class="address">
+        <p><a href="https://kubo-robot.com/" target="_blank">KUBO Robotics ApS</a><br>
+           Niels Bohrs Allé 185,<br>
+           5220 Odense SØ<br>
+           SE/CVR-nr.: 37043958
+        <p>
+      </div>
 
-              <div class="adress">
-                <p>KUBO Robotics ApS<br>
-                   Niels Bohrs Allé 185,<br>
-                   5220 Odense SØ<br>
-                   SE/CVR-nr.: 37043958
-                <p>
-              </div>
-
-        <div class="social-icons">
-            <img src="assets/images/social-icons/facebook-icon.png" alt="">
-            <img src="assets/images/social-icons/twitter-icon.png" alt="">
-            <img src="assets/images/social-icons/youtube-icon.png" alt="">
-            <img src="assets/images/social-icons/linkedin-icon.png" alt="">
-            <img src="assets/images/social-icons/instagram-icon.png" alt="">
-            <img src="assets/images/social-icons/snapchat-icon.png" alt="">
-        </div>
-
+      <div class="social-icons">
+          <img src="assets/images/social-icons/facebook-icon.png" alt="Facebook ikon">
+          <img src="assets/images/social-icons/twitter-icon.png" alt="Twitter ikon">
+          <img src="assets/images/social-icons/youtube-icon.png" alt="Youtube ikon">
+          <img src="assets/images/social-icons/linkedin-icon.png" alt="LinkedIn ikon">
+          <img src="assets/images/social-icons/instagram-icon.png" alt="Instagram ikon">
+          <img src="assets/images/social-icons/snapchat-icon.png" alt="Snapchat ikon">
+      </div>
     </footer>
- <script src="assets/js/help_script.js" charset="utf-8"></script>
+
+    <script src="assets/js/help-script.js"></script>
   </body>
 </html>

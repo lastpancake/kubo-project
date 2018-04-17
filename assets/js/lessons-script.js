@@ -13,61 +13,61 @@ function getLocalLessons() {
     return JSON.parse(lessons);
   }
   else {
-    return [  new Lesson("assets/images/introduction.png",
+    return [  new Lesson("assets/images/introduction.PNG",
                           "Introduktion",
                           "Noget om introduktion",
                           "code",
                           "introduction"),
-              new Lesson("assets/images/communication.png",
+              new Lesson("assets/images/communication.PNG",
                           "Kommunikation",
                           "Noget om kommunikation",
                           "maths",
                           "communication"),
-              new Lesson("assets/images/collaboration.png",
+              new Lesson("assets/images/collaboration.PNG",
                           "Samarbejde",
                           "Noget om samarbejde",
                           "danish",
                           "collaboration"),
-              new Lesson("assets/images/creativity.png",
+              new Lesson("assets/images/creativity.PNG",
                           "Kreativitet",
                           "Noget om kreativitet",
                           "physics",
                           "creativity"),
-              new Lesson("assets/images/critical-thinking.png",
+              new Lesson("assets/images/critical-thinking.PNG",
                           "Critical thinking",
                           "Noget om critical thinking",
                           "code",
                           "critical-thinking"),
-              new Lesson("assets/images/introduction.png",
+              new Lesson("assets/images/introduction.PNG",
                           "Introduktion",
                           "Noget om introduktion",
                           "code",
                           "introduction"),
-              new Lesson("assets/images/communication.png",
+              new Lesson("assets/images/communication.PNG",
                           "Kommunikation",
                           "Noget om kommunikation",
                           "maths",
                           "communication"),
-              new Lesson("assets/images/collaboration.png",
+              new Lesson("assets/images/collaboration.PNG",
                           "Samarbejde",
                           "Noget om samarbejde",
                           "danish",
                           "collaboration"),
-              new Lesson("assets/images/creativity.png",
+              new Lesson("assets/images/creativity.PNG",
                           "Kreativitet",
                           "Noget om kreativitet",
                           "physics",
                           "creativity"),
-              new Lesson("assets/images/critical-thinking.png",
+              new Lesson("assets/images/critical-thinking.PNG",
                           "Critical thinking",
                           "Noget om critical thinking",
                           "code",
                           "critical-thinking"),
-                          new Lesson("assets/images/critical-thinking.png",
-                                      "Critical thinking",
-                                      "Noget om critical thinking",
-                                      "code",
-                                      "critical-thinking")];
+              new Lesson("assets/images/critical-thinking.PNG",
+                          "Critical thinking",
+                          "Noget om critical thinking",
+                          "code",
+                          "critical-thinking")];
   }
 }
 
@@ -115,6 +115,7 @@ function buildAllLessons() {
 
     let lessonImage = document.createElement("img");
     lessonImage.setAttribute("src", variable.imageSrc);
+    lessonImage.setAttribute("alt", variable.title)
 
     lessonBox.appendChild(lessonImage);
 

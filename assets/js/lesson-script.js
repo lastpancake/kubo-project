@@ -12,11 +12,11 @@ function getLocalComment() {
     return JSON.parse(comments);
   }
   else {
-    return [  new Comment("assets/images/Portræt-til-Skype.jpg",
+    return [  new Comment("assets/images/man-1.jpg",
                           "Morten Mortensen",
-                          "5-11-2017",
+                          "5-1-2018",
                           "Rigtig god lektion!"),
-              new Comment("assets/images/Portræt-til-Skype.jpg",
+              new Comment("assets/images/woman-2.jpg",
                           "Ulla Arnesen",
                           "5-1-2018",
                           "Mine elever var rigtig glade for lektionen :-)")];
@@ -60,6 +60,7 @@ function buildList() {
     let userImgDiv = document.createElement("div");
     userImgDiv.classList.add("post-user-img");
     let userImg = document.createElement("img");
+    userImg.setAttribute("alt", comments[i].userName)
     userImg.src = comments[i].imageSrc;
 
     userImgDiv.appendChild(userImg);
@@ -103,7 +104,7 @@ window.onload = function() {
 var submitBtn = document.querySelector("#addCommentBtn");
 
 submitBtn.addEventListener("click", function() {
-  let userImage = "assets/images/Portræt-til-Skype.jpg";
+  let userImage = "assets/images/man-1.jpg";
   let userName = "Mathias Poulsen";
   let time = new Date();
   let date = time.getDate() + "-" + (time.getMonth() + 1) + "-" + time.getFullYear();

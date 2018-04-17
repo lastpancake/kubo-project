@@ -58,6 +58,7 @@ function buildList() {
     let userImgDiv = document.createElement("div");
     userImgDiv.classList.add("post-user-img");
     let userImg = document.createElement("img");
+    userImg.setAttribute("alt", comments[i].userName);
     userImg.src = comments[i].imageSrc;
 
     userImgDiv.appendChild(userImg);
@@ -101,7 +102,7 @@ window.onload = function() {
 var submitBtn = document.querySelector("#addCommentBtn");
 
 submitBtn.addEventListener("click", function() {
-  let userImage = "assets/images/Portræt-til-Skype.jpg";
+  let userImage = "assets/images/man-1.jpg";
   let userName = "Mathias Poulsen";
   let time = new Date();
   let date = time.getDate() + "-" + (time.getMonth() + 1) + "-" + time.getFullYear();

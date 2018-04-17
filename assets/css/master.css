@@ -88,6 +88,10 @@ main {
 footer {
   grid-area: foot;
   background: #044c7f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 40px;
 }
 
 hr {
@@ -97,7 +101,7 @@ hr {
   border-radius: 3px;
 }
 
-header > img {
+header > a > img {
   height: 50px;
   vertical-align: middle;
   margin-left: auto;
@@ -114,6 +118,19 @@ nav > ul > li > a {
   text-decoration: none;
   font-size: 1em;
   font-weight: bold;
+}
+
+.account-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  height: 30px;
+  width: 30px;
+}
+
+.address > p > a {
+  text-decoration: none;
+  color:white;
 }
 
 #velkommen-billede {
@@ -144,7 +161,7 @@ nav > ul > li > a {
   line-height: 1.8em;
 }
 
-#relaterede-opslag-h3 {
+.relaterede-opslag-h3 {
   font-weight: normal;
   text-decoration: none;
   color: rgb(4, 76, 127);
@@ -363,7 +380,6 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
 }
 
 .flex-div-comment {
@@ -537,6 +553,14 @@ span > img {
 
 .test {
   background: #f1f1f2;
+}
+
+.message-icon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 60px;
+    width: 60px;
 }
 
 /* for fællesskab */
@@ -718,12 +742,12 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
 }
 
 .add-post > input[type=submit] {
-    background-color: #00a19b;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #00a19b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #postText {
@@ -736,6 +760,49 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
 
 #addPost {
   margin-bottom: 50px;
+}
+
+#add-post-title {
+  height: 50px;
+}
+
+/* Footer */
+
+.logo-footer {
+  height: 100px;
+  width: 380px;
+  align-content: center;
+}
+
+.logo-footer img {
+  height: 50px;
+  width: 100px;
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.address {
+  align-content: center;
+  text-align: center;
+  width: 380px;
+}
+
+.address p{
+  color: #fff;
+  line-height: 1.4em;
+  font-size: 0.8em;
+  text-align: left;
+  display: inline-block;
+}
+
+.social-icons {
+  width: 380px;
+}
+
+.social-icons img  {
+  margin: 0px 0px 0px 20px;
+
 }
 
 /* Smaller screensizes */
@@ -772,12 +839,21 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
   }
 
   header {
-    height: 80px;
+    height: 120px;
+    line-height: 3.5em;
+  }
+
+  header > .account-icon {
+    bottom: 35px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
   }
 
   nav {
-    margin-top: 80px;
-    height: 80px;
+    margin-top: 120px;
+    height: 120px;
+    line-height: 3.5em;
   }
 
   .left {
@@ -820,7 +896,7 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
 
 @media (max-width: 400px) {
   body {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 2em;
     grid-template-areas:
                           "main"
@@ -837,12 +913,22 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
   }
 
   header {
-    height: 80px;
+    height: 120px;
+    line-height: 3.5em;
+  }
+
+  header > .account-icon {
+    bottom: 35px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
   }
 
   nav {
-    margin-top: 80px;
-    height: 80px;
+    margin-top: 120px;
+    height: 120px;
+    font-size: 40px;
+    line-height: 3em;
   }
 
   .left {

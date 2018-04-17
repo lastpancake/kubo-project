@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="da" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title></title>
+    <title>KEDU - Fællesskab: Vores nye kuborobot vil ikke tænde!</title>
+    <link rel="icon" href="assets/images/icon.ico">
+    <meta name="description" content="KUBO.education også kaldet KEDU er hjemmesiden hvor folk som er interesserede i KUBO kan diskutere, få hjælp, og dele viden. KUBO er en uddannelsesrobot som hjælper børn fra børnehaveklasse op til 5. klasse med at lære at kode."/>
     <link rel="stylesheet" href="assets/css/master.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
   <body>
     <header>
-      <img src="assets/images/kedu-logo-white.png" alt="">
+      <a href="index.html">
+        <img src="assets/images/kedu-logo-white.png" alt="KEDU Logo">
+      </a>
+      <img class="account-icon" src="assets/images/account.svg" alt="Account icon">
     </header>
 
       <nav>
@@ -36,9 +41,9 @@
       <div class="vertical-flex">
         <a href="lesson.html"><div class="new-lesson-box">
           <div class="lesson-image">
-            <img src="assets/images/man-1.jpg" alt="">
+            <img src="assets/images/man-1.jpg" alt="Mand">
           </div>
-          <h3 id="relaterede-opslag-h3">Nogen der har en god lektion at dele?</h3>
+          <h3 class="relaterede-opslag-h3">Nogen der har en god lektion at dele?</h3>
           <div class="news-info">
             <img src="assets/images/ic_favorite_blue_24px.svg" alt="Favorit ikon">
             <p class="news-likes">54</p>
@@ -50,9 +55,9 @@
         <a href="lesson.html">
           <div class="new-lesson-box">
           <div class="lesson-image">
-            <img src="assets/images/man-2.jpg" alt="">
+            <img src="assets/images/man-2.jpg" alt="Mand">
           </div>
-          <h3 id="relaterede-opslag-h3">Det er nødt til at blive sagt...</h3>
+          <h3 class="relaterede-opslag-h3">Det er nødt til at blive sagt...</h3>
           <div class="news-info">
             <img src="assets/images/ic_favorite_blue_24px.svg" alt="Favorit ikon">
             <p class="news-likes">43</p>
@@ -70,7 +75,7 @@
               <div class="flex-div-comment">
                 <div class="user-info">
                   <div class="post-user-img">
-                    <img src="assets/images/woman-1.jpg" alt="">
+                    <img src="assets/images/woman-1.jpg" alt="Dorte Nielsen">
                   </div>
                   <div class="post-user-white">
                     Dorte Nielsen
@@ -87,11 +92,11 @@
                 </div>
                 <div class="comment-favorite-discussion">
                   <div class="favorite">
-                    <img src="assets/images/ic_favorite_white_24px.svg" alt="">
+                    <img src="assets/images/ic_favorite_white_24px.svg" alt="Favoritikon">
                   </div>
                   8
                   <div class="comment">
-                    <img src="assets/images/ic_comment_white_24px.svg" alt="">
+                    <img src="assets/images/ic_comment_white_24px.svg" alt="Kommentarikon">
                   </div>
                   15
                 </div>
@@ -116,10 +121,36 @@
 
 
     </main>
-    <footer>
 
+    <footer>
+      <div class="logo-footer">
+        <a href="index.html">
+          <img src="assets/images/kedu-logo-white.svg" alt="KEDU Logo">
+        </a>
+      </div>
+
+      <div class="address">
+        <p><a href="https://kubo-robot.com/" target="_blank">KUBO Robotics ApS</a><br>
+           Niels Bohrs Allé 185,<br>
+           5220 Odense SØ<br>
+           SE/CVR-nr.: 37043958
+        <p>
+      </div>
+
+      <div class="social-icons">
+          <img src="assets/images/social-icons/facebook-icon.png" alt="Facebook ikon">
+          <img src="assets/images/social-icons/twitter-icon.png" alt="Twitter ikon">
+          <img src="assets/images/social-icons/youtube-icon.png" alt="Youtube ikon">
+          <img src="assets/images/social-icons/linkedin-icon.png" alt="LinkedIn ikon">
+          <img src="assets/images/social-icons/instagram-icon.png" alt="Instagram ikon">
+          <img src="assets/images/social-icons/snapchat-icon.png" alt="Snapchat ikon">
+      </div>
     </footer>
 
-    <script src="assets/js/discussion-script.js" charset="utf-8"></script>
+    <div class="message-icon">
+      <img src="assets/images/message.svg" alt="Chat icon">
+    </div>
+
+    <script src="assets/js/discussion-script.js"></script>
   </body>
 </html>
