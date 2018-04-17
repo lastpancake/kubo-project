@@ -135,3 +135,33 @@ text-align: right;
     line-height: 3em;
   }
 }
+
+@media (max-width: 400px) {
+  main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header {
+    height: 200px;
+    line-height: 6em;
+  }
+
+  header > .account-icon {
+    bottom: 72px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  nav {
+    margin-top: 200px;
+    height: 200px;
+    font-size: 40px;
+    line-height: 5em;
+  }
+
+  main {
+    margin-top: 200px;
+  }
+}

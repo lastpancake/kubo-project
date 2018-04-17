@@ -35,6 +35,30 @@ ul > li > a {
   box-shadow: 0 5px 20px rgba(4, 76, 127, 0.2);
 }
 
+@media (max-width: 900px) {
+  body {
+    grid-template-areas:
+                          "left"
+                          "main"
+                          "right"
+                          "foot";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 100px;
+  }
+
+
+    .left {
+      grid: left;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 200px;
+    }
+
+    h1 {
+      margin-top: 40px;
+    }
+}
+
 @media (max-width: 800px) {
   body {
     font-size: 32px;
@@ -104,8 +128,6 @@ ul > li > a {
 
 @media (max-width: 400px) {
   body {
-    font-size: 30px;
-    line-height: 2em;
     grid-template-areas:
                           "left"
                           "main"
@@ -121,12 +143,22 @@ ul > li > a {
   }
 
   header {
-    height: 120px;
+    height: 200px;
+    line-height: 6em;
+  }
+
+  header > .account-icon {
+    bottom: 72px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
   }
 
   nav {
-    margin-top: 120px;
-    height: 120px;
+    margin-top: 200px;
+    height: 200px;
+    font-size: 40px;
+    line-height: 5em;
   }
 
   h1 {
@@ -136,7 +168,7 @@ ul > li > a {
   .left {
     grid: left;
     width: auto;
-    margin-top: 300px;
+    margin-top: 450px;
   }
 
   .center {
