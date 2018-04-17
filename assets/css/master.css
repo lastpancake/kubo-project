@@ -544,7 +544,6 @@ span > img {
 .check-flex > div {
   flex: 1 0 100px;
   margin: 10px;
-  background: rgba(blue, 0.25);
 }
 
 .check-flex > div > input {
@@ -859,7 +858,6 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
   }
 
   .left {
-    grid: left;
     width: auto;
     margin-top: 70px;
   }
@@ -871,7 +869,6 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
   }
 
   .right {
-    grid: right;
     width: auto;
     margin-top: 70px;
   }
@@ -935,7 +932,6 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
   }
 
   .left {
-    grid: left;
     width: auto;
     margin-top: 20px;
   }
@@ -947,7 +943,6 @@ body > main > div > div:nth-child(3) > div:nth-child(3) {
   }
 
   .right {
-    grid: right;
     width: auto;
     margin-top: 20px;
   }
