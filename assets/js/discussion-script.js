@@ -12,11 +12,11 @@ function getLocalDiscussionComment() {
     return JSON.parse(comments);
   }
   else {
-    return [  new DiscussionComment("assets/images/man-1.JPG",
+    return [  new DiscussionComment("assets/images/man-1.jpg",
                           "Morten Mortensen",
                           "5-11-2017",
                           "Godt spørgsmål!"),
-              new DiscussionComment("assets/images/woman-2.JPG",
+              new DiscussionComment("assets/images/woman-2.jpg",
                           "Ulla Arnesen",
                           "5-1-2018",
                           "Jeg lytter lige med")];
@@ -102,7 +102,7 @@ window.onload = function() {
 var submitBtn = document.querySelector("#addCommentBtn");
 
 submitBtn.addEventListener("click", function() {
-  let userImage = "assets/images/man-1.JPG";
+  let userImage = "assets/images/man-1.jpg";
   let userName = "Mathias Poulsen";
   let time = new Date();
   let date = time.getDate() + "-" + (time.getMonth() + 1) + "-" + time.getFullYear();
