@@ -12,11 +12,11 @@ function getLocalComment() {
     return JSON.parse(comments);
   }
   else {
-    return [  new Comment("assets/images/man-1.jpg",
+    return [  new Comment("assets/images/man-1.JPG",
                           "Morten Mortensen",
                           "5-1-2018",
                           "Rigtig god lektion!"),
-              new Comment("assets/images/woman-2.jpg",
+              new Comment("assets/images/woman-2.JPG",
                           "Ulla Arnesen",
                           "5-1-2018",
                           "Mine elever var rigtig glade for lektionen :-)")];
@@ -104,7 +104,7 @@ window.onload = function() {
 var submitBtn = document.querySelector("#addCommentBtn");
 
 submitBtn.addEventListener("click", function() {
-  let userImage = "assets/images/man-1.jpg";
+  let userImage = "assets/images/man-1.JPG";
   let userName = "Mathias Poulsen";
   let time = new Date();
   let date = time.getDate() + "-" + (time.getMonth() + 1) + "-" + time.getFullYear();
